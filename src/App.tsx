@@ -1,4 +1,5 @@
 import NavBar from "./components/navBar";
+import ContactUs from "./Pages/ContactUs";
 import HomePage from "./Pages/HomePage";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <NavBar />
       <HomePage/>
+      <ContactUs />
    
     </>
   );
