@@ -52,7 +52,7 @@ function NavBar() {
       <ul
         className={`md:hidden absolute top-16 left-0 w-full bg-black/50 text-white p-4 ${isMenuOpen ? "block" : "hidden"}`}
       >
-        {["home", "Events", "Packages", "Reviews", "contact", "about-us"].map((menu) => (
+        {["home", "Events", "Packages", "Reviews", "about-us", "contact-us"].map((menu) => (
           <li
             key={menu}
             className="py-2"
