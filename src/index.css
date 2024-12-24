@@ -9,5 +9,11 @@
 
     --radius: 0.5rem
   }
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    
+  }
 }
 

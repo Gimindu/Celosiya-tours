@@ -10,7 +10,7 @@ export default function Events() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className="relative h-screen flex flex-col items-center"
+      className="relative h-screen flex flex-col items-center justify-center px-4"
     >
       {/* Responsive margin-top for heading */}
       <h1 className="text-3xl md:text-4xl text-white font-bold absolute top-5 mt-24 md:mt-32 lg:mt-40">
@@ -20,7 +20,7 @@ export default function Events() {
       <img
         src={event}
         alt="Event"
-        className="w-3/4 md:w-1/2 mt-28 md:mt-32 lg:mt-40"
+        className="md:w-1/2 mt-28 md:mt-32 lg:mt-40 "
       />
     </div>
   );

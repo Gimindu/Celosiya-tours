@@ -2,6 +2,7 @@ import React from 'react';
 import packageBackground from '@/assets/images/package_bg.png';
 import packageex from '@/assets/images/packageex.png';
 
+
 export default function Packages() {
   return (
     <div
@@ -11,14 +12,14 @@ export default function Packages() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
-      className="relative h-screen flex flex-col items-center"
+      className="relative md:h-screen flex flex-col items-center"
     >
-      <h1 className="text-3xl md:text-4xl text-white font-bold absolute mt-16 md:mt-24 lg:mt-28">
+      <h1 className="text-3xl md:text-4xl text-white font-bold absolute mt-24 md:mt-24 lg:mt-28 ">
         What You Can Visit With Us
       </h1>
 
       {/* Card Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mx-8 gap-8 mt-56">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mx-8 gap-8 mt-56 ">
         {/* Card 1 */}
         <div className="max-w-sm w-full lg:max-w-full lg:flex relative">
           <div
@@ -146,10 +147,11 @@ export default function Packages() {
 
       {/* More Button */}
       <div className="mt-6">
-        <button className="bg-[#DF6951] text-white px-6 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300">
+        <button className="bg-[#DF6951] text-white px-6 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300 mb-10">
           View More Packages
         </button>
       </div>
+  
     </div>
   );
 }

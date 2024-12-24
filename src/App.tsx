@@ -1,4 +1,5 @@
 import NavBar from "./components/navBar";
+import WhatsAppIcon from "./components/whatsppIcon";
 import ContactUs from "./Pages/ContactUs";
 import Events from "./Pages/Events";
 import HomePage from "./Pages/HomePage";
@@ -13,6 +14,8 @@ export default function Home() {
       <Events /> 
       <Packages />
       <ContactUs />
+      <WhatsAppIcon />  
+
    
     </>
   );
