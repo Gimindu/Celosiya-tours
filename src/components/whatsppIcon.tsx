@@ -2,7 +2,7 @@
 
 export default function WhatsAppIcon() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "1234567890"; // Replace with your WhatsApp number
+    const phoneNumber = "+94702992332"; // Replace with your WhatsApp number
     const message = "Hello, I need some assistance!"; // Default message
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");

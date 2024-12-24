@@ -1,5 +1,5 @@
 import eventBackground from '@/assets/images/event-background.png';
-import event from '@/assets/images/events.png';
+import events from '@/assets/images/events.png';
 
 export default function Events() {
   return (
@@ -18,7 +18,7 @@ export default function Events() {
       </h1>
       {/* Responsive image size and margin-top */}
       <img
-        src={event}
+        src={events}
         alt="Event"
         className="md:w-1/2 mt-28 md:mt-32 lg:mt-40 "
       />
