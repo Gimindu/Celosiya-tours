@@ -10,7 +10,6 @@ export default function Footer() {
             alt="Travel Logo"
             className="h-12 mx-auto md:mx-0"
           />
-          <h3 className="font-bold text-lg text-blue-950">Travel</h3>
           <p className="text-blue-950 text-sm">
             Travel helps companies manage payments easily.
           </p>
