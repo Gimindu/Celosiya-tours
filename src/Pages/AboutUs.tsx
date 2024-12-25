@@ -1,4 +1,3 @@
-import backgroundimg from './assets/images/aboutbg.png';
 import topImage from '../assets/images/heading.png';
 import rightImage from '../assets/images/aboutus.png';
 
@@ -26,7 +25,7 @@ export default function AboutUs() {
         </div>
 
         {/* Right center image */}
-        <div className="absolute top-[calc(100%+1rem)] sm:top-[45%] right-2 sm:right-4 transform -translate-y-[115%] sm:translate-y-0">
+        <div className="absolute top-[calc(100%+1rem)] sm:top-[45%] right-2 sm:right-4 transform -translate-y-0 sm:translate-y-0">
           <img src={rightImage} alt="Right Image" className="w-30 sm:w-30 h-auto" />
         </div>
       </div>
