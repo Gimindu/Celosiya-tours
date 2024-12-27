@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage";
 import Packages from "./Pages/Packages";
 import Review from "./Pages/Review";
 import AboutUs from "./Pages/AboutUs";
+import Gellery from "./Pages/Gellary";
 
 
 export default function Home() {
@@ -18,7 +19,9 @@ export default function Home() {
       <AboutUs />
       <Review/>
       <ContactUs />
+      <Gellery/>
       <WhatsAppIcon />  
+      
 
    
     </>
