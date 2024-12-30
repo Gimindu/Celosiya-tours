@@ -26,7 +26,7 @@ export default function Gallery() {
   const displayedImages = showMore ? galleryData : galleryData.slice(0, 6);
 
   return (
-    <div className="p-6 bg-cover bg-center" style={{ backgroundImage: "url('/images/backg.jpg')" }}>
+    <div id="gallery" className="p-6 bg-cover bg-center" style={{ backgroundImage: "url('/images/backg.jpg')" }}>
       <h1 className="text-5xl text-white font-bold text-center mb-12">
         Gallery
       </h1>

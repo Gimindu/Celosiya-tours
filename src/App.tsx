@@ -7,6 +7,7 @@ import Packages from "./Pages/Packages";
 import Review from "./Pages/Review";
 import AboutUs from "./Pages/AboutUs";
 import Gellery from "./Pages/Gellary";
+import Hotel from "./Pages/Hotel";
 
 
 export default function Home() {
@@ -14,12 +15,14 @@ export default function Home() {
     <>
       <NavBar />
       <HomePage/>
+      <AboutUs />
       <Events /> 
       <Packages />
-      <AboutUs />
+      <Hotel />
       <Review/>
-      <ContactUs />
       <Gellery/>
+      <ContactUs />
+     
       <WhatsAppIcon />  
       
 

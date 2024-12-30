@@ -26,7 +26,7 @@ function NavBar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-10">
-        {["home", "Events", "Packages", "Reviews", "about-us", "contact-us"].map((menu) => (
+        {["home", "about-us" ,"Events", "Packages", "Reviews","gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
             className="group"
@@ -60,7 +60,7 @@ function NavBar() {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {["home", "Events", "Packages", "Reviews", "about-us", "contact-us"].map((menu) => (
+        {["home",  "about-us","Events", "Packages", "Reviews","gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
             className="py-2"
