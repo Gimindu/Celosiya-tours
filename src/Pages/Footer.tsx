@@ -49,8 +49,9 @@ export default function Footer() {
       <div className="border-4 border-blue-950 mt-8"></div>
 
       <p className="text-blue-950 text-center text-sm mt-4">
-        Copyright © Xpro 2022. All Rights Reserved.
-      </p>
+  Copyright © Servmind 2025. All Rights Reserved.
+</p>
+
     </footer>
   );
 }

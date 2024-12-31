@@ -1,34 +1,30 @@
 import packageBackground from '@/assets/images/package_bg.png';
 import packageex from '@/assets/images/packageex.png';
 
-
-export default function Packages() {
-
-
-  const packages = [
-    {
-      title: 'Explore Beautiful Destinations',
-      description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
-      details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
-    },
-    {
-      title: 'Adventure Awaits You',
-      description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
-      details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
-    },
-    {
-      title: 'Uncover Hidden Gems',
-      description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
-      details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
-    },
-    {
-      title: 'Luxury Travel Experience',
-      description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
-      details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
-    },
-
-  ];
-
+export default function all_pacages() {
+    const packages = [
+        {
+          title: 'Explore Beautiful Destinations',
+          description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
+          details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+        },
+        {
+          title: 'Adventure Awaits You',
+          description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
+          details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+        },
+        {
+          title: 'Uncover Hidden Gems',
+          description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
+          details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+        },
+        {
+          title: 'Luxury Travel Experience',
+          description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
+          details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+        },
+    
+      ];
   return (
     <div
       id="Packages"
@@ -40,7 +36,7 @@ export default function Packages() {
       className="relative md:h-screen flex flex-col items-center"
     >
       <h1 className="text-3xl md:text-4xl text-white font-bold absolute mt-24 md:mt-24 lg:mt-28 ">
-        What You Can Visit With Us
+      All_pacages
       </h1>
 
       {/* Card Section */}
@@ -74,13 +70,13 @@ export default function Packages() {
 
       {/* Navigation Button */}
       <div className="mt-6">
-       <button
+        <button
           className="bg-[#DF6951] text-white px-6 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300 mb-10"
           
         >
           Show More
-        </button> 
+        </button>
       </div>
-    </div>
-  );
+    </div>  
+  )
 }
