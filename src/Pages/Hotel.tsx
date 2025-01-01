@@ -39,9 +39,9 @@ export default function Hotel() {
         }}
         className="relative h-screen flex flex-col items-center justify-center px-4"
       >
-        <div className="flex-grow flex items-center justify-center">
+        <div className="flex-grow flex items-center justify-center  ">
           {/* Glassmorphic Form Container */}
-          <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-10 w-[90%] max-w-5xl mt-20 mb-10">
+          <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-5 w-[90%] max-w-5xl lg:mt-20 lg:mb-10 lg:p-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {/* Left Side: Photos */}
               <div className="grid gap-6">
@@ -58,9 +58,7 @@ export default function Hotel() {
                       <img
                         onClick={() => setActive(imgelink)}
                         src={imgelink}
-                        className={`h-24 max-w-full cursor-pointer rounded-lg object-cover object-center ${
-                          active === imgelink ? "border-4 border-blue-500" : ""
-                        }`}
+                        className={`h-24 max-w-full cursor-pointer rounded-lg object-cover object-center ${active === imgelink ? "border-4 border-blue-500" : ""}`}
                         alt={`Thumbnail ${index + 1}`}
                       />
                     </div>
@@ -69,20 +67,20 @@ export default function Hotel() {
               </div>
 
               {/* Right Side: Description */}
-              <div className="flex flex-col justify-center text-white space-y-6">
-                <h2 className="text-4xl font-extrabold text-center md:text-left">Welcome to Our Hotel</h2>
-                <p className="text-xl text-justify">
+              <div className="flex flex-col justify-center text-white ">
+                <h2 className="lg:text-4xl font-extrabold text-center md:text-left text-2xl mb-4">Welcome to Our Hotel</h2>
+                <p className="lg:text-xl text-justify text-sm">
                   Experience the perfect blend of luxury and comfort at our hotel. Nestled in the heart of the city, our hotel
                   offers world-class amenities, exquisite dining, and stunning views to make your stay truly unforgettable.
                 </p>
-                <ul className="text-xl space-y-4">
+                <ul className="lg:text-xl space-y-4 mt-6">
                   <li className="flex items-center"><FaBed className="mr-3 text-2xl" /> Variety of comfortable rooms</li>
                   <li className="flex items-center"><FaCoffee className="mr-3 text-2xl" /> Unlimited coffee</li>
                   <li className="flex items-center"><FaBath className="mr-3 text-2xl" /> Private bathrooms</li>
                   <li className="flex items-center"><FaUtensils className="mr-3 text-2xl" /> Fully equipped kitchens</li>
                   <li className="flex items-center"><FaConciergeBell className="mr-3 text-2xl" /> Delicious dining options</li>
                 </ul>
-                <p className="text-xl text-justify">
+                <p className="text-sm text-justify lg:text-xl mt-4">
                   Book your stay with us today and discover a world of elegance and sophistication.
                 </p>
               </div>
