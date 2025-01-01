@@ -21,10 +21,67 @@ export default function ContactUs() {
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  // Handle form submission
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
+  // // Handle form submission
+  // const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  //   e.preventDefault();
 
+  //   // Validation
+  //   if (
+  //     !formData.firstName ||
+  //     !formData.lastName ||
+  //     !formData.email ||
+  //     !formData.message
+  //   ) {
+  //     setError("All fields marked with * are required.");
+  //     setSuccess("");
+  //     return;
+  //   }
+
+  //   if (!/\S+@\S+\.\S+/.test(formData.email)) {
+  //     setError("Please enter a valid email address.");
+  //     setSuccess("");
+  //     return;
+  //   }
+
+  //   // Set loading state
+  //   setLoading(true);
+  //   setError("");
+  //   setSuccess("");
+
+  //   try {
+  //     // Send email using EmailJS
+  //     await emailjs.send(
+  //       "your_service_id", // Replace with your EmailJS service ID
+  //       "your_template_id", // Replace with your EmailJS template ID
+  //       {
+  //         firstName: formData.firstName,
+  //         lastName: formData.lastName,
+  //         email: formData.email,
+  //         phone: formData.phone,
+  //         message: formData.message,
+  //       },
+  //       "your_user_id" // Replace with your EmailJS user/public key
+  //     );
+
+  //     // Success
+  //     setSuccess("Your message has been successfully sent!");
+  //     setFormData({
+  //       firstName: "",
+  //       lastName: "",
+  //       email: "",
+  //       phone: "",
+  //       message: "",
+  //     });
+  //   } catch (err) {
+  //     setError("Failed to send your message. Please try again later.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
     // Validation
     if (
       !formData.firstName ||
@@ -36,23 +93,23 @@ export default function ContactUs() {
       setSuccess("");
       return;
     }
-
+  
     if (!/\S+@\S+\.\S+/.test(formData.email)) {
       setError("Please enter a valid email address.");
       setSuccess("");
       return;
     }
-
+  
     // Set loading state
     setLoading(true);
     setError("");
     setSuccess("");
-
+  
     try {
       // Send email using EmailJS
       await emailjs.send(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
+        "service_al17d27", // Replace with your EmailJS Service ID
+        "template_5lnjcxo", // Replace with your EmailJS Template ID
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -60,9 +117,9 @@ export default function ContactUs() {
           phone: formData.phone,
           message: formData.message,
         },
-        "your_user_id" // Replace with your EmailJS user/public key
+        "i8OoDK9PJt-1kLX52" // Replace with your EmailJS User/Public Key
       );
-
+  
       // Success
       setSuccess("Your message has been successfully sent!");
       setFormData({
