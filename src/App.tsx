@@ -32,14 +32,7 @@ export default function App() {
 
       {/* Define Routes */}
       <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/packages" element={<Packages />} />
-        <Route path="/hotel" element={<Hotel />} />
-        <Route path="/review" element={<Review />} />
-        <Route path="/gallery" element={<Gellery />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        
         <Route path="/all_packages" element={<AllPackages />} />
       </Routes>
 
