@@ -1,32 +1,35 @@
-import packageBackground from '@/assets/images/package_bg.png';
-import packageex from '@/assets/images/packageex.png';
-
+import { useNavigate } from "react-router-dom";
+import packageBackground from "@/assets/images/package_bg.png";
+import packageex from "@/assets/images/packageex.png";
 
 export default function Packages() {
-
+  const navigate = useNavigate(); // Initialize navigation hook
 
   const packages = [
     {
-      title: 'Explore Beautiful Destinations',
-      description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
-      details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      title: "Explore Beautiful Destinations",
+      description:
+        "Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.",
+      details: ["5 Days", "4 Nights", "Breakfast", "Transportation"],
     },
     {
-      title: 'Adventure Awaits You',
-      description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
-      details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+      title: "Adventure Awaits You",
+      description:
+        "Discover the world's most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.",
+      details: ["7 Days", "6 Nights", "All Meals", "Guided Tours"],
     },
     {
-      title: 'Uncover Hidden Gems',
-      description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
-      details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+      title: "Uncover Hidden Gems",
+      description:
+        "Let us guide you to destinations off the beaten path, where you'll find beauty, culture, and excitement at every corner.",
+      details: ["4 Days", "3 Nights", "Local Cuisine", "Private Guide"],
     },
     {
-      title: 'Luxury Travel Experience',
-      description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
-      details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      title: "Luxury Travel Experience",
+      description:
+        "Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.",
+      details: ["10 Days", "9 Nights", "Gourmet Dining", "VIP Transportation"],
     },
-
   ];
 
   return (
@@ -34,8 +37,8 @@ export default function Packages() {
       id="Packages"
       style={{
         backgroundImage: `url(${packageBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
       className="relative md:h-screen flex flex-col items-center"
     >
@@ -46,7 +49,10 @@ export default function Packages() {
       {/* Card Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mx-8 gap-8 mt-56 ">
         {packages.map((pkg, index) => (
-          <div className="max-w-sm w-full lg:max-w-full lg:flex relative" key={index}>
+          <div
+            className="max-w-sm w-full lg:max-w-full lg:flex relative"
+            key={index}
+          >
             <div
               className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{ backgroundImage: `url(${packageex})` }}
@@ -54,7 +60,9 @@ export default function Packages() {
             ></div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white/30 backdrop-blur-lg rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div className="mb-8">
-                <div className="text-white font-bold text-xl mb-2">{pkg.title}</div>
+                <div className="text-white font-bold text-xl mb-2">
+                  {pkg.title}
+                </div>
                 <p className="text-white text-base">{pkg.description}</p>
               </div>
               <div className="flex items-center">
@@ -74,12 +82,12 @@ export default function Packages() {
 
       {/* Navigation Button */}
       <div className="mt-6">
-       <button
+        <button
           className="bg-[#DF6951] text-white px-6 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300 mb-10"
-          
+          onClick={() => navigate("/all_packages")} // Navigate to /all_packages
         >
           Show More
-        </button> 
+        </button>
       </div>
     </div>
   );

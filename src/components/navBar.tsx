@@ -3,12 +3,18 @@ import { useEffect, useState } from "react";
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("home");
+  const [isHotelDetailsOpen, setIsHotelDetailsOpen] = useState(false); // New state for Hotel Details dropdown
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleMenuClick = (menu: string) => {
     setActiveMenu(menu);
-    window.location.hash = menu; // Set the hash to navigate
+    if (menu === "Hotel Details") {
+      setIsHotelDetailsOpen(!isHotelDetailsOpen); // Toggle Hotel Details dropdown
+    } else {
+      setIsHotelDetailsOpen(false); // Close the dropdown if another menu is clicked
+      window.location.hash = menu; // Navigate for other menu items
+    }
   };
 
   useEffect(() => {
@@ -26,25 +32,30 @@ function NavBar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-10">
-        {["home", "about-us" ,"Events", "Packages", "Reviews","gallery", "contact-us"].map((menu) => (
+        {["home", "about-us", "Events", "Hotel Details", "Reviews", "gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
-            className="group"
+            className={`relative ${menu === "Hotel Details" ? "dropdown" : ""}`}
             onClick={() => handleMenuClick(menu)}
           >
             <a
-              href={`#${menu}`}
+              href={menu !== "Hotel Details" ? `#${menu}` : "#"}
               className={`relative text-gray-300 hover:text-white transition-all duration-300 ${
                 activeMenu === menu ? "text-white" : ""
               }`}
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
-              <span
-                className={`absolute left-0 bottom-0 w-0 h-1 bg-orange-500 group-hover:w-12 ${
-                  activeMenu === menu ? "w-12" : "w-0"
-                } transition-all duration-500 ease-in-out origin-bottom-left mt-1`}
-              ></span>
             </a>
+            {menu === "Hotel Details" && isHotelDetailsOpen && (
+              <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded">
+                <li className="px-4 py-2 hover:bg-orange-500">
+                  <a href="#room">Room</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-orange-500">
+                  <a href="#packages">Packages</a>
+                </li>
+              </ul>
+            )}
           </li>
         ))}
       </ul>
@@ -60,25 +71,30 @@ function NavBar() {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {["home",  "about-us","Events", "Packages", "Reviews","gallery", "contact-us"].map((menu) => (
+        {["home", "about-us", "Events", "Hotel Details", "Reviews", "gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
-            className="py-2"
+            className={`py-2 ${menu === "Hotel Details" ? "dropdown" : ""}`}
             onClick={() => handleMenuClick(menu)}
           >
             <a
-              href={`#${menu}`}
+              href={menu !== "Hotel Details" ? `#${menu}` : "#"}
               className={`relative hover:text-gray-300 ${
                 activeMenu === menu ? "text-white" : ""
               }`}
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
-              <span
-                className={`absolute left-0 bottom-0 w-0 h-1 bg-orange-500 group-hover:w-12 ${
-                  activeMenu === menu ? "w-12" : "w-0"
-                } transition-all duration-500 ease-in-out origin-bottom-left mt-1`}
-              ></span>
             </a>
+            {menu === "Hotel Details" && isHotelDetailsOpen && (
+              <ul className="ml-4 mt-2">
+                <li className="px-4 py-2 hover:bg-orange-500">
+                  <a href="#room">Room</a>
+                </li>
+                <li className="px-4 py-2 hover:bg-orange-500">
+                  <a href="#packages">Packages</a>
+                </li>
+              </ul>
+            )}
           </li>
         ))}
       </ul>
