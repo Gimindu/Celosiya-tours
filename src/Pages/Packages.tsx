@@ -34,7 +34,7 @@ export default function Packages() {
 
   return (
     <div
-      id="Packages"
+      id="packages"
       style={{
         backgroundImage: `url(${packageBackground})`,
         backgroundSize: "cover",

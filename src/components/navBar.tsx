@@ -3,22 +3,21 @@ import { useEffect, useState } from "react";
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("home");
-  const [isHotelDetailsOpen, setIsHotelDetailsOpen] = useState(false); // New state for Hotel Details dropdown
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleMenuClick = (menu: string) => {
     setActiveMenu(menu);
-    if (menu === "Hotel Details") {
-      setIsHotelDetailsOpen(!isHotelDetailsOpen); // Toggle Hotel Details dropdown
+    if (menu === "Services") {
+      setIsServicesOpen(!isServicesOpen);
     } else {
-      setIsHotelDetailsOpen(false); // Close the dropdown if another menu is clicked
-      window.location.hash = menu; // Navigate for other menu items
+      setIsServicesOpen(false);
+      window.location.hash = menu;
     }
   };
 
   useEffect(() => {
-    // Ensure navigation to the "home" section on refresh
     setActiveMenu("home");
     window.location.hash = "home";
   }, []);
@@ -32,27 +31,27 @@ function NavBar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-10">
-        {["home", "about-us", "Events", "Hotel Details", "Reviews", "gallery", "contact-us"].map((menu) => (
+        {["home", "about-us", "Events", "Services", "Reviews", "gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
-            className={`relative ${menu === "Hotel Details" ? "dropdown" : ""}`}
+            className={`relative ${menu === "Services" ? "dropdown" : ""}`}
             onClick={() => handleMenuClick(menu)}
           >
             <a
-              href={menu !== "Hotel Details" ? `#${menu}` : "#"}
+              href={menu !== "Services" ? `#${menu}` : "#"}
               className={`relative text-gray-300 hover:text-white transition-all duration-300 ${
                 activeMenu === menu ? "text-white" : ""
               }`}
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Hotel Details" && isHotelDetailsOpen && (
+            {menu === "Services" && isServicesOpen && (
               <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded">
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
+                  <a href="#room">Room</a> {/* Scrolls to the room section */}
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#packages">Packages</a>
+                  <a href="#packages">Packages</a> {/* Scrolls to the packages section */}
                 </li>
               </ul>
             )}
@@ -71,27 +70,27 @@ function NavBar() {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {["home", "about-us", "Events", "Hotel Details", "Reviews", "gallery", "contact-us"].map((menu) => (
+        {["home", "about-us", "Events", "Services", "Reviews", "gallery", "contact-us"].map((menu) => (
           <li
             key={menu}
-            className={`py-2 ${menu === "Hotel Details" ? "dropdown" : ""}`}
+            className={`py-2 ${menu === "Services" ? "dropdown" : ""}`}
             onClick={() => handleMenuClick(menu)}
           >
             <a
-              href={menu !== "Hotel Details" ? `#${menu}` : "#"}
+              href={menu !== "Services" ? `#${menu}` : "#"}
               className={`relative hover:text-gray-300 ${
                 activeMenu === menu ? "text-white" : ""
               }`}
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Hotel Details" && isHotelDetailsOpen && (
+            {menu === "Services" && isServicesOpen && (
               <ul className="ml-4 mt-2">
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
+                  <a href="#room">Room</a> {/* Scrolls to the room section */}
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#packages">Packages</a>
+                  <a href="#packages">Packages</a> {/* Scrolls to the packages section */}
                 </li>
               </ul>
             )}

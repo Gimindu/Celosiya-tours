@@ -31,7 +31,7 @@ export default function Hotel() {
   return (
     <>
       <div
-        id="Events"
+        id="room"
         style={{
           backgroundImage: `url(${eventBackground})`,
           backgroundSize: 'cover',
