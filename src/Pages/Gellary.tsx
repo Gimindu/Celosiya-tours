@@ -1,64 +1,113 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Gallery() {
-  // Define an array of gallery items
-  const galleryData = [
-    { id: 2, title: 'Image B', description: 'Discover the charm of B', imageUrl: '/images/d.jpg' },
-    { id: 2, title: 'Image B', description: 'Discover the charm of B', imageUrl: '/images/b.jpg' },
-    { id: 3, title: 'Image C', description: 'Experience the vibe of C', imageUrl: '/images/c.jpg' },
-    { id: 1, title: 'Image A', description: 'Explore the beauty of A', imageUrl: '/images/a.jpg' },
-    { id: 1, title: 'Image A', description: 'Explore the beauty of A', imageUrl: '/images/e.jpg' },
-    { id: 3, title: 'Image C', description: 'Experience the vibe of C', imageUrl: '/images/g.jpg' },
-    { id: 2, title: 'Image B', description: 'Discover the charm of B', imageUrl: '/images/h.jpg' },
-    { id: 1, title: 'Image A', description: 'Explore the beauty of A', imageUrl: '/images/i.jpg' },
-    { id: 3, title: 'Image C', description: 'Experience the vibe of C', imageUrl: '/images/k.jpg' },
-  ];
 
-  // State to track whether more images should be displayed
-  const [showMore, setShowMore] = useState(false);
+  const backgroundImage = 'url(/images/pexels-tomas-malik-793526-1998434.jpg)';
 
-  // Function to toggle showing more images
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
+  const divStyle = {
+    backgroundImage: backgroundImage,
+    backgroundSize: 'cover', // Adjusts the image to cover the whole area
+    backgroundPosition: 'center', // Centers the image
+    height: '100vh' // Set height to cover the full viewport height
   };
 
-  // Display the first 6 images or all images based on showMore
-  const displayedImages = showMore ? galleryData : galleryData.slice(0, 6);
+  const galleryData = [
+    { id: 1, title: "Hampi Temple", imageUrl: "/images/elephants-4864736.jpg" },
+    { id: 2, title: "Golden Temple", imageUrl: "/images/nine-arch-bridge-5657721.jpg" },
+    { id: 3, title: "Konarak Sun Temple", imageUrl: "/images/sigiriya-459197.jpg" },
+    { id: 4, title: "Gwalior Fort", imageUrl: "/images/sri-lanka-4580991.jpg" },
+    { id: 5, title: "Mahabodhi Temple", imageUrl: "/images/stairs-3209618.jpg" },
+    { id: 6, title: "Charminar", imageUrl: "/images/sri-lanka-4580991.jpg" },
+    { id: 7, title: "Red Fort", imageUrl: "/images/a.jpg" },
+    { id: 8, title: "Taj Mahal", imageUrl: "/images/b.jpg" },
+    { id: 9, title: "Qutub Minar", imageUrl: "/images/c.jpg" },
+    { id: 10, title: "Victoria Memorial", imageUrl: "/images/d.jpg" },
+    { id: 11, title: "Gateway of India", imageUrl: "/images/e.jpg" },
+    { id: 12, title: "Lotus Temple", imageUrl: "/images/h.jpg" },
+  ];
+
+  // State for selected image
+  const [selectedImage, setSelectedImage] = useState(galleryData[0]);
+
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // Number of images per page
+
+  // Calculate total pages
+  const totalPages = Math.ceil(galleryData.length / itemsPerPage);
+
+  // Get images for the current page
+  const currentImages = galleryData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Function to handle page change
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
-    <div id="gallery" className="p-6 bg-cover bg-center" style={{ backgroundImage: "url('/images/backg.jpg')" }}>
-      <h1 className="text-5xl text-white font-bold text-center mb-12">
-        Gallery
+    <div className="p-6 bg-gray-100" style={divStyle}>
+      <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
+      Our Gallery
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {displayedImages.map((item, index) => (
-          <div
-            key={item.id}
-            className={`relative group rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105
-                        ${index % 3 === 0 ? "col-span-2 row-span-2" : ""}
-                        ${index % 2 === 0 ? "col-span-1" : ""}`}
-          >
+      <p className="mb-8 text-white font-bold text-center">
+      Explore the beauty of Sri Lanka through our gallery. Click on an image to see it in detail, and browse through to discover more stunning destinations.
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Side: Selected Image */}
+        <div className="lg:col-span-1 flex justify-center items-center">
+          <div className="rounded-lg overflow-hidden shadow-lg">
             <img
-              src={item.imageUrl}
-              alt={item.title}
-              className="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-500"
+              src={selectedImage.imageUrl}
+              alt={selectedImage.title}
+              className="w-full h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-              <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
-              <p className="text-lg">{item.description}</p>
+            <div className="p-4 bg-white text-center bg-opacity-50">
+              <h2 className="text-xl font-bold">{selectedImage.title}</h2>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Right Side: Image Grid */}
+        <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4 overflow-y-auto max-h-[500px]">
+          {currentImages.map((item) => (
+            <div
+              key={item.id}
+              className={`relative cursor-pointer rounded-lg overflow-hidden shadow-md ${
+                selectedImage.id === item.id ? "ring-4 ring-blue-500" : ""
+              }`}
+              onClick={() => setSelectedImage(item)}
+            >
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                <h3 className="text-sm font-semibold">{item.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      {/* "More" button to toggle visibility of additional images */}
-      <div className="text-center mt-8">
-        <button
-          onClick={toggleShowMore}
-          className="font-bold py-2 px-6 bg-orange-500 text-white rounded hover:bg-orange-600 focus:outline-none focus:shadow-outline"
-        >
-          {showMore ? "Show Less" : "More"}
-        </button>
+
+      {/* Pagination */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {[...Array(totalPages).keys()].map((pageNumber) => (
+          <button
+            key={pageNumber}
+            onClick={() => handlePageChange(pageNumber + 1)}
+            className={`px-4 py-2 rounded-lg border ${
+              currentPage === pageNumber + 1
+                ? "bg-blue-500 text-white"
+                : "bg-white text-gray-700"
+            } hover:bg-blue-300`}
+          >
+            {pageNumber + 1}
+          </button>
+        ))}
       </div>
     </div>
   );
