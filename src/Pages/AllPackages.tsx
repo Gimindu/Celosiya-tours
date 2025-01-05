@@ -1,7 +1,7 @@
 import packageBackground from '@/assets/images/package_bg.png';
 import packageex from '@/assets/images/packageex.png';
 
-export default function all_pacages() {
+export default function AllPackages() {
     const packages = [
         {
           title: 'Explore Beautiful Destinations',
@@ -27,7 +27,7 @@ export default function all_pacages() {
       ];
   return (
     <div
-      id="Packages"
+      id="AllPackages"
       style={{
         backgroundImage: `url(${packageBackground})`,
         backgroundSize: 'cover',
