@@ -49,66 +49,69 @@ export default function Gallery() {
 
   return (
     <div className="p-6 bg-gray-100" style={divStyle}>
-      <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
-      Our Gallery
-      </h1>
-      <p className="mb-8 text-white font-bold text-center">
-      Explore the beauty of Sri Lanka through our gallery. Click on an image to see it in detail, and browse through to discover more stunning destinations.
-      </p>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left Side: Selected Image */}
-        <div className="lg:col-span-1 flex justify-center items-center">
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img
-              src={selectedImage.imageUrl}
-              alt={selectedImage.title}
-              className="w-full h-96 object-cover"
-            />
-            <div className="p-4 bg-white text-center bg-opacity-50">
-              <h2 className="text-xl font-bold">{selectedImage.title}</h2>
+<div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-10 w-[90%] max-w-4xl mt-20 mb-10 mx-auto justify-center">
+          <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
+        Our Gallery
+        </h1>
+        <p className="mb-8 text-white font-bold text-center">
+        Explore the beauty of Sri Lanka through our gallery. Click on an image to see it in detail, and browse through to discover more stunning destinations.
+        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Left Side: Selected Image */}
+          <div className="lg:col-span-1 flex justify-center items-center">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={selectedImage.imageUrl}
+                alt={selectedImage.title}
+                className="w-full h-96 object-cover"
+              />
+              <div className="p-4 bg-white text-center bg-opacity-50">
+                <h2 className="text-xl font-bold">{selectedImage.title}</h2>
+              </div>
             </div>
+          </div>
+
+          {/* Right Side: Image Grid */}
+          <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4 overflow-y-auto max-h-[500px]">
+            {currentImages.map((item) => (
+              <div
+                key={item.id}
+                className={`relative cursor-pointer rounded-lg overflow-hidden shadow-md ${
+                  selectedImage.id === item.id ? "ring-4 ring-blue-500" : ""
+                }`}
+                onClick={() => setSelectedImage(item)}
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="w-full h-32 object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Side: Image Grid */}
-        <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4 overflow-y-auto max-h-[500px]">
-          {currentImages.map((item) => (
-            <div
-              key={item.id}
-              className={`relative cursor-pointer rounded-lg overflow-hidden shadow-md ${
-                selectedImage.id === item.id ? "ring-4 ring-blue-500" : ""
-              }`}
-              onClick={() => setSelectedImage(item)}
+        {/* Pagination */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {[...Array(totalPages).keys()].map((pageNumber) => (
+            <button
+              key={pageNumber}
+              onClick={() => handlePageChange(pageNumber + 1)}
+              className={`px-4 py-2 rounded-lg border ${
+                currentPage === pageNumber + 1
+                  ? "bg-blue-500 text-white"
+                  : "bg-white text-gray-700"
+              } hover:bg-blue-300`}
             >
-              <img
-                src={item.imageUrl}
-                alt={item.title}
-                className="w-full h-32 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
-                <h3 className="text-sm font-semibold">{item.title}</h3>
-              </div>
-            </div>
+              {pageNumber + 1}
+            </button>
           ))}
         </div>
-      </div>
-
-      {/* Pagination */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {[...Array(totalPages).keys()].map((pageNumber) => (
-          <button
-            key={pageNumber}
-            onClick={() => handlePageChange(pageNumber + 1)}
-            className={`px-4 py-2 rounded-lg border ${
-              currentPage === pageNumber + 1
-                ? "bg-blue-500 text-white"
-                : "bg-white text-gray-700"
-            } hover:bg-blue-300`}
-          >
-            {pageNumber + 1}
-          </button>
-        ))}
-      </div>
+        </div>
+        
     </div>
   );
 }
