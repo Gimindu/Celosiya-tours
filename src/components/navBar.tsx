@@ -40,7 +40,15 @@ function NavBar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-10">
-        {["home", "about-us", "Events", "Services", "Reviews", "gallery", "contact-us"].map((menu) => (
+        {[
+          "home",
+          "about-us",
+          "Events",
+          "Services",
+          "Reviews",
+          "gallery",
+          "contact-us",
+        ].map((menu) => (
           <li
             key={menu}
             className={`relative ${menu === "Services" ? "group" : ""}`}
@@ -59,11 +67,12 @@ function NavBar() {
             {menu === "Services" && isServicesOpen && (
               <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded">
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
-                </li>
-                <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#packages">Packages</a>
                 </li>
+                <li className="px-4 py-2 hover:bg-orange-500">
+                  <a href="#room">Room</a>
+                </li>
+                
               </ul>
             )}
           </li>
@@ -81,7 +90,15 @@ function NavBar() {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {["home", "about-us", "Events", "Services", "Reviews", "gallery", "contact-us"].map((menu) => (
+        {[
+          "home",
+          "about-us",
+          "Events",
+          "Services",
+          "Reviews",
+          "gallery",
+          "contact-us",
+        ].map((menu) => (
           <li
             key={menu}
             className={`py-2 ${menu === "Services" ? "group" : ""}`}
@@ -100,10 +117,10 @@ function NavBar() {
             {menu === "Services" && isServicesOpen && (
               <ul className="ml-4 mt-2">
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
+                  <a href="#packages">Packages</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#packages">Packages</a>
+                  <a href="#room">Room</a>
                 </li>
               </ul>
             )}

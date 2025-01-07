@@ -1,7 +1,7 @@
-import image1 from "../assets/images/guided-tours.png";
-import image2 from "../assets/images/flight.png";
-import image3 from "../assets/images/religious.png";
-import image4 from "../assets/images/support.png";
+import image1 from "../assets/images/Services/guided-tours.png";
+import image2 from "../assets/images/Services/flight.png";
+import image3 from "../assets/images/Services/religious.png";
+import image4 from "../assets/images/Services/support.png";
 
 export default function HomePage() {
   return (

@@ -1,4 +1,5 @@
-import revew1 from '@/assets/images/revew1.png';
+import revew1 from '@/assets/images/reviews/revew1.png';
+import revew2 from '@/assets/images/reviews/revew2.png';
 import {
   Carousel,
   CarouselContent,
@@ -36,7 +37,7 @@ export default function Review() {
                 <CarouselItem>
                   <div className="flex justify-center">
                     <img
-                      src={revew1}
+                      src={revew2}
                       alt="Review2"
                       className="md:w-1/2 mt-10 md:mt-12 lg:mt-16" // Adjusted margin-top
                     />

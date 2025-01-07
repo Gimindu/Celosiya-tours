@@ -48,7 +48,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="p-6 bg-gray-100" style={divStyle}>
+    <div  id="gallery" className="p-6 bg-gray-100" style={divStyle}>
 <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-10 w-[90%] max-w-4xl mt-20 mb-10 mx-auto justify-center">
           <h1 className="text-3xl md:text-4xl text-white font-bold text-center">
         Our Gallery
