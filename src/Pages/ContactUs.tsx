@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import Footer from "./Footer";
 
@@ -22,7 +22,7 @@ export default function ContactUs() {
   };
 
   // This is for the EmailJS
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
   
     // Validation
