@@ -1,6 +1,7 @@
 import   { useState } from "react";
 import emailjs from "emailjs-com";
 import Footer from "./Footer";
+import Swal from "sweetalert2";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,25 @@ export default function ContactUs() {
   const handleChange = (e: { target: { id: any; value: any; }; }) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  
+  const toastAlert = (icon: any, title: any) => {
+    Toast.fire({
+      icon: icon,
+      title: title,
+    });
   };
 
   // This is for the EmailJS
@@ -64,7 +84,7 @@ export default function ContactUs() {
       );
   
       // Success
-      setSuccess("Your message has been successfully sent!");
+      // setSuccess("Your message has been successfully sent!");
       setFormData({
         firstName: "",
         lastName: "",
@@ -72,12 +92,17 @@ export default function ContactUs() {
         phone: "",
         message: "",
       });
+      toastAlert("success", "Email sent successfully.");
     } catch (err) {
-      setError("Failed to send your message. Please try again later.");
+      toastAlert("error", "Something went wrong, Try again!");
     } finally {
       setLoading(false);
     }
   };
+
+
+
+
   
   return (
     <>
