@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from '@/assets/images/logo.png'; // Import logo image
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,10 @@ function NavBar() {
     }
   };
 
+  const handleDropdownToggle = () => {
+    setIsServicesOpen((prev) => !prev); // Toggle dropdown visibility on click
+  };
+
   const handleDropdownEnter = () => {
     clearTimeout(dropdownTimeout); // Clear any existing timeout
     setIsServicesOpen(true);
@@ -26,6 +31,10 @@ function NavBar() {
     }, 300); // Add a delay of 300ms before hiding the dropdown
   };
 
+  const handleLogoClick = () => {
+    window.location.hash = "home"; // Scroll back to home page
+  };
+
   useEffect(() => {
     setActiveMenu("home");
     window.location.hash = "home";
@@ -34,8 +43,13 @@ function NavBar() {
   return (
     <nav className="fixed top-0 left-0 w-full flex justify-between items-center text-lg p-6 backdrop-blur-md bg-black/40 text-white z-10 font-semibold shadow-lg">
       {/* Logo */}
-      <div className="text-3xl font-extrabold tracking-tight flex items-center space-x-2">
-        <span>Logo</span>
+      <div className="flex items-center space-x-2">
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-12 w-auto cursor-pointer" // Add cursor pointer to indicate it's clickable
+          onClick={handleLogoClick} // Add click handler for logo
+        />
       </div>
 
       {/* Desktop Menu */}
@@ -56,15 +70,15 @@ function NavBar() {
             onMouseLeave={menu === "Services" ? handleDropdownLeave : undefined}
           >
             <a
-              href={menu !== "Services" ? `#${menu}` : "#"}
+              href={menu !== "Services" ? `#${menu}` : undefined} // Remove href for Services
               className={`relative text-gray-300 hover:text-white transition-all duration-300 ${
                 activeMenu === menu ? "text-white" : ""
-              }`}
-              onClick={() => handleMenuClick(menu)}
+              } ${menu === "Services" ? "cursor-pointer" : ""}`} // Enable click for Services
+              onClick={menu !== "Services" ? () => handleMenuClick(menu) : handleDropdownToggle} // Toggle dropdown on click for Services
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Services" && isServicesOpen && (
+            {(menu === "Services" && isServicesOpen) && (
               <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded">
                 <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#packages">Packages</a>
@@ -72,7 +86,6 @@ function NavBar() {
                 <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#room">Room</a>
                 </li>
-                
               </ul>
             )}
           </li>
@@ -106,15 +119,15 @@ function NavBar() {
             onMouseLeave={menu === "Services" ? handleDropdownLeave : undefined}
           >
             <a
-              href={menu !== "Services" ? `#${menu}` : "#"}
+              href={menu !== "Services" ? `#${menu}` : undefined} // Remove href for Services
               className={`relative hover:text-gray-300 ${
                 activeMenu === menu ? "text-white" : ""
-              }`}
-              onClick={() => handleMenuClick(menu)}
+              } ${menu === "Services" ? "cursor-pointer" : ""}`} // Enable click for Services
+              onClick={menu !== "Services" ? () => handleMenuClick(menu) : handleDropdownToggle} // Toggle dropdown on click for Services
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Services" && isServicesOpen && (
+            {(menu === "Services" && isServicesOpen) && (
               <ul className="ml-4 mt-2">
                 <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#packages">Packages</a>

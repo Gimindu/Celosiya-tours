@@ -43,7 +43,7 @@ export default function Packages() {
       className="relative flex flex-col items-center py-16 px-4 sm:px-8 md:px-12 lg:px-20"
     >
       {/* Header Section */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center mb-12">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center mb-8 mt-8">
         What You Can Visit With Us
       </h1>
 

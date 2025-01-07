@@ -14,16 +14,16 @@ export default function Footer() {
             Travel helps companies manage payments easily.
           </p>
           <div className="flex gap-4 justify-center md:justify-start mt-4"> 
-            <a href="#linkedin" aria-label="LinkedIn" className="text-gray-600 hover:text-blue-600"/*Replace withe relevent logos and links*/>
+            <a href="#linkedin" aria-label="LinkedIn" className="text-gray-600 hover:text-blue-600">
               <i className="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#messenger" aria-label="Messenger" className="text-gray-600 hover:text-blue-500"/*Replace withe relevent logos and links*/>
+            <a href="#messenger" aria-label="Messenger" className="text-gray-600 hover:text-blue-500">
               <i className="fab fa-facebook-messenger fa-lg"></i>
             </a>
-            <a href="#twitter" aria-label="Twitter" className="text-gray-600 hover:text-blue-400" /*Replace withe relevent logos and links*/>
+            <a href="#twitter" aria-label="Twitter" className="text-gray-600 hover:text-blue-400">
               <i className="fab fa-twitter fa-lg"></i>
             </a>
-            <a href="#other" aria-label="Other" className="text-gray-600 hover:text-blue-400" /*Replace withe relevent logos and links*/>
+            <a href="#other" aria-label="Other" className="text-gray-600 hover:text-blue-400">
               <i className="fas fa-globe fa-lg"></i>
             </a>
           </div>
@@ -49,9 +49,8 @@ export default function Footer() {
       <div className="border-4 border-blue-950 mt-8"></div>
 
       <p className="text-blue-950 text-center text-sm mt-4">
-  Copyright © Servmind 2025. All Rights Reserved.
-</p>
-
+        Copyright © Servmind 2025. All Rights Reserved.
+      </p>
     </footer>
   );
 }

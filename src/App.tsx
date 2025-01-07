@@ -24,6 +24,7 @@ const MainContent = () => {
       <Review />
       <Gellery />
       <ContactUs />
+      
     </>
   );
 };
