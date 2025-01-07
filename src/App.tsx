@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 // Import pages and components
 import NavBar from "./components/navBar";
@@ -24,28 +24,34 @@ const MainContent = () => {
       <Review />
       <Gellery />
       <ContactUs />
-      
     </>
   );
 };
 
-export default function App() {
-  return (
-    <Router>
-      {/* Navbar visible on all pages */}
-      <NavBar />
+function Layout() {
+  const location = useLocation(); // Use inside Router
 
-      {/* Define Routes for dynamic content */}
+  return (
+    <>
+      {/* Conditionally render NavBar */}
+      {location.pathname !== "/all_packages" && <NavBar />}
+
+      {/* Routes for the application */}
       <Routes>
         <Route path="/all_packages" element={<AllPackages />} />
-        <Route
-          path="/*"
-          element={<MainContent />}
-        />
+        <Route path="/*" element={<MainContent />} />
       </Routes>
 
       {/* WhatsApp Icon visible on all pages */}
       <WhatsAppIcon />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Layout />
     </Router>
   );
 }

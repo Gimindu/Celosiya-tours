@@ -4,63 +4,68 @@ import packageex from '@/assets/images/packageex.png';
 export default function AllPackages() {
   const packages = [
     {
-      title: 'Explore Beautiful Destinations',
-      description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
+      title: ' Ella',
+      description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
     },
     {
-      title: 'Adventure Awaits You',
-      description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
+      title: 'Sigiriya',
+      description: 'Discover the UNESCO-listed Sigiriya Rock Fortress, Pidurangala, Dambulla Cave Temple, and Minneriya National Park. Experience local culture with a village safari.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
     },
     {
-      title: 'Uncover Hidden Gems',
-      description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
+      title: 'Kandy ',
+      description: 'Explore Kandy’s Temple of the Tooth Relic, Royal Botanical Gardens, and traditional craftsmanship. Enjoy panoramic views, a dancing show, and an elephant ride.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
     },
     {
-      title: 'Luxury Travel Experience',
-      description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
+      title: 'Nuwara Eliya  ',
+      description: 'Known as "Little England," it features tea factories, Haggala Botanical Gardens, and the colonial-era Nuwara Eliya Post Office.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
     },
     {
-      title: 'Explore Beautiful Destinations',
-      description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
+      title: 'Yala National Park',
+      description: 'Spot leopards, elephants, and exotic wildlife on an exhilarating safari in Yala National Park. Visit the ancient Sithulpawwa Rock Temple and the Kataragama Temple.  ',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
     },
     {
-      title: 'Adventure Awaits You',
-      description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
+      title: 'Trincomalee',
+      description: 'Trincomalee offers culture and coastal beauty with Thirukeshwaram Temple, Marble Beach, Nilaveli Beach, and Pigeon Island.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
     },
     {
-      title: 'Uncover Hidden Gems',
-      description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
+      title: 'Udawalawa National Park',
+      description: 'Visit Udawalawa National Park to see elephants, crocodiles, and birds. Explore the Elephant Transit Home and the Sankapala Raja Maha Viharaya Temple.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
     },
     {
-      title: 'Luxury Travel Experience',
-      description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
+      title: 'Colombo  ',
+      description: 'Colombo combines history and modernity with landmarks like Gangaramaya Temple, Galle Face, the National Museum, and vibrant city tours.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
     },
     {
-      title: 'Explore Beautiful Destinations',
-      description: 'Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.',
+      title: 'Galle ',
+      description: 'Galle boasts historic charm with its Fort, lighthouse, turtle farms, antique shops, and stunning beaches like Unawatuna.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
     },
     {
-      title: 'Adventure Awaits You',
-      description: 'Discover the world\'s most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.',
+      title: 'Anuradhapura  ',
+      description: 'Explore ancient ruins, the Ranmasu Uyana Stargate, and the serene Isurumuniya Temple in this historical capital.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
     },
     {
-      title: 'Uncover Hidden Gems',
-      description: 'Let us guide you to destinations off the beaten path, where you\'ll find beauty, culture, and excitement at every corner.',
+      title: ' Polonnaruwa  ',
+      description: 'Discover Polonnaruwa’s ancient city and serene Parakrama Samudraya Lake, showcasing Sri Lanka’s royal history.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
     },
     {
-      title: 'Luxury Travel Experience',
-      description: 'Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.',
+      title: 'Kalutara ',
+      description: 'Kalutara features sacred sites, scenic falls, the Sinharaja Rainforest, and vibrant river safaris.',
+      details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+    },
+    {
+      title: ' Mirissa ',
+      description: 'Mirissa offers whale watching, surfing, and beach relaxation. Visit the Weligama fishing village and the iconic Parrot Rock.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
     },
   ];
@@ -98,13 +103,13 @@ export default function AllPackages() {
                   <div className="text-white font-bold text-xl mb-2">{pkg.title}</div>
                   <p className="text-white text-base">{pkg.description}</p>
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <ul className="text-white text-sm list-inside">
                     {pkg.details.map((detail, detailIndex) => (
                       <li key={detailIndex}>• {detail}</li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
                 <button className="bg-[#DF6951] text-white px-4 py-2 absolute bottom-4 right-4 w-54 rounded-full hover:bg-[#D56C4C] transition duration-300">
                   Contact for More details
                 </button>

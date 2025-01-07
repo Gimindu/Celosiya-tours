@@ -7,28 +7,24 @@ export default function Packages() {
 
   const packages = [
     {
-      title: "Explore Beautiful Destinations",
-      description:
-        "Join us on an unforgettable journey to explore stunning locations with exceptional services and experiences designed just for you.",
-      details: ["5 Days", "4 Nights", "Breakfast", "Transportation"],
+      title: ' Ella',
+      description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
+      details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
     },
     {
-      title: "Adventure Awaits You",
-      description:
-        "Discover the world's most exciting destinations with all-inclusive packages, designed to bring you adventure and relaxation.",
-      details: ["7 Days", "6 Nights", "All Meals", "Guided Tours"],
+      title: 'Sigiriya',
+      description: 'Discover the UNESCO-listed Sigiriya Rock Fortress, Pidurangala, Dambulla Cave Temple, and Minneriya National Park. Experience local culture with a village safari.  ',
+      details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
     },
     {
-      title: "Uncover Hidden Gems",
-      description:
-        "Let us guide you to destinations off the beaten path, where you'll find beauty, culture, and excitement at every corner.",
-      details: ["4 Days", "3 Nights", "Local Cuisine", "Private Guide"],
+      title: 'Kandy ',
+      description: 'Explore Kandy’s Temple of the Tooth Relic, Royal Botanical Gardens, and traditional craftsmanship. Enjoy panoramic views, a dancing show, and an elephant ride.  ',
+      details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
     },
     {
-      title: "Luxury Travel Experience",
-      description:
-        "Indulge in luxury with our exclusive packages that offer world-class experiences, comfort, and personalized services.",
-      details: ["10 Days", "9 Nights", "Gourmet Dining", "VIP Transportation"],
+      title: 'Nuwara Eliya  ',
+      description: 'Known as "Little England," it features tea factories, Haggala Botanical Gardens, and the colonial-era Nuwara Eliya Post Office.  ',
+      details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
     },
   ];
 
