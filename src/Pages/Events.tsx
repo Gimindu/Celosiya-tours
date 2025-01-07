@@ -1,5 +1,5 @@
-import eventBackground from '@/assets/images/event-background.png';
-import events from '@/assets/images/events.png';
+import eventBackground from "@/assets/images/event-background.png";
+import events from "@/assets/images/events.png";
 
 export default function Events() {
   return (
@@ -7,20 +7,21 @@ export default function Events() {
       id="Events"
       style={{
         backgroundImage: `url(${eventBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
-      className="relative h-screen flex flex-col items-center justify-center px-4"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8"
     >
-      {/* Responsive margin-top for heading */}
-      <h1 className="text-3xl md:text-4xl text-white font-bold absolute top-5 mt-24 md:mt-32 lg:mt-40">
+      {/* Heading with dynamic spacing */}
+      <h1 className="text-4xl md:text-4xl text-white font-bold mb-8 md:mb-12 lg:mb-16">
         Events
       </h1>
-      {/* Responsive image size and margin-top */}
+
+      {/* Larger responsive image */}
       <img
         src={events}
         alt="Event"
-        className="md:w-1/2 mt-28 md:mt-32 lg:mt-40 "
+        className="w-full md:w-1/2 lg:w-1/2 h-auto"
       />
     </div>
   );
