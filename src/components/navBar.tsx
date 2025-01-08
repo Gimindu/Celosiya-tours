@@ -4,6 +4,7 @@ import logo from "@/assets/images/logo.png"; // Import logo image
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("home");
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // State for Services dropdown
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -11,6 +12,9 @@ function NavBar() {
     setActiveMenu(menu);
     if (menu !== "Services") {
       window.location.hash = menu; // Navigate for other menu items
+      setIsServicesOpen(false); // Close Services dropdown if another menu is clicked
+    } else {
+      setIsServicesOpen(!isServicesOpen); // Toggle Services dropdown
     }
   };
 
@@ -55,12 +59,12 @@ function NavBar() {
               className={`relative text-gray-300 hover:text-white transition-all duration-300 ${
                 activeMenu === menu ? "text-white" : ""
               } ${menu === "Services" ? "cursor-pointer" : ""}`}
-              onClick={menu !== "Services" ? () => handleMenuClick(menu) : undefined}
+              onClick={menu !== "Services" ? () => handleMenuClick(menu) : () => handleMenuClick("Services")}
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Services" && (
-              <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded hidden group-hover:block">
+            {menu === "Services" && isServicesOpen && (
+              <ul className="absolute left-0 top-full bg-black/70 text-white shadow-lg mt-2 rounded transition-all duration-500 ease-in-out opacity-100">
                 <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#packages">Packages</a>
                 </li>
@@ -103,8 +107,8 @@ function NavBar() {
             >
               {menu.charAt(0).toUpperCase() + menu.slice(1).replace("-", " ")}
             </a>
-            {menu === "Services" && (
-              <ul className="ml-4 mt-2">
+            {menu === "Services" && isServicesOpen && (
+              <ul className="ml-4 mt-2 transition-all duration-500 ease-in-out">
                 <li className="px-4 py-2 hover:bg-orange-500">
                   <a href="#packages">Packages</a>
                 </li>

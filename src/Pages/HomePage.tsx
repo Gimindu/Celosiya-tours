@@ -10,7 +10,7 @@ export default function HomePage() {
         id="home"
         className="bg-[url('./assets/images/sg.png')] bg-cover h-screen flex flex-col items-center justify-center relative"
       >
-        <p className="text-white text-left px-4 sm:px-8 lg:px-32 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-20 sm:mt-28 lg:ml-96 ">
+        <p className="text-white text-left px-4 sm:px-8 lg:px-32 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text6xl mb-20 sm:mt-28 lg:ml-96 ">
           "No matter where <br /> you want to go, we will <br /> take you there"
         </p>
         <div className="py-9 sm:py-11">
