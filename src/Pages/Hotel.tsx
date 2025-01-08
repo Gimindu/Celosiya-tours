@@ -24,7 +24,7 @@ export default function Hotel() {
       className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8"
     >
       <div className="flex-grow flex items-center justify-center">
-        <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-5 w-full max-w-7xl lg:p-10">
+        <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-5 w-full max-w-7xl lg:p-10 mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Left Side: Photos */}
             <div className="grid gap-6">
