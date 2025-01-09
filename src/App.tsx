@@ -12,6 +12,8 @@ import AboutUs from "./Pages/AboutUs";
 import Gellery from "./Pages/Gellary";
 import Hotel from "./Pages/Hotel";
 import AllPackages from "./Pages/AllPackages";
+import NotFoundPage from "./Pages/404page";
+; // Import the NotFoundPage
 
 const MainContent = () => {
   return (
@@ -40,6 +42,7 @@ function Layout() {
       <Routes>
         <Route path="/all_packages" element={<AllPackages />} />
         <Route path="/*" element={<MainContent />} />
+        <Route path="*" element={<NotFoundPage />} /> {/* Error page route */}
       </Routes>
 
       {/* WhatsApp Icon visible on all pages */}

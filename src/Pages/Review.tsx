@@ -1,5 +1,9 @@
-import revew1 from '@/assets/images/reviews/revew1.png';
-import revew2 from '@/assets/images/reviews/revew2.png';
+import revew1 from '@/assets/images/reviews/Reviews1.png';
+import revew2 from '@/assets/images/reviews/Reviews2.png';
+import revew3 from '@/assets/images/reviews/Reviews3.png';
+import revew4 from '@/assets/images/reviews/Reviews4.png';
+import revew5 from '@/assets/images/reviews/Reviews5.png';
+
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +27,12 @@ export default function Review() {
           </h2>
 
           <div className="flex justify-center mb-20">
-            <Carousel >
+            <Carousel 
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
               <CarouselContent>
                 <CarouselItem>
                   <div className="flex justify-center">
@@ -46,8 +55,26 @@ export default function Review() {
                 <CarouselItem>
                   <div className="flex justify-center">
                     <img
-                      src={revew1}
+                      src={revew3}
                       alt="Review3"
+                      className="md:w-1/2 mt-10 md:mt-12 lg:mt-16" // Adjusted margin-top
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="flex justify-center">
+                    <img
+                      src={revew4}
+                      alt="Review4"
+                      className="md:w-1/2 mt-10 md:mt-12 lg:mt-16" // Adjusted margin-top
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="flex justify-center">
+                    <img
+                      src={revew5}
+                      alt="Review5"
                       className="md:w-1/2 mt-10 md:mt-12 lg:mt-16" // Adjusted margin-top
                     />
                   </div>

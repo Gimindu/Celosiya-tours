@@ -42,7 +42,7 @@ export default function Gallery() {
     <div id="gallery" className="p-6 bg-gray-100" style={divStyle}>
       <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-6 md:p-10 w-[90%] max-w-4xl mt-10 md:mt-20 mb-10 mx-auto">
         {/* Header Section */}
-        <h1 className="text-2xl md:text-4xl text-white font-bold text-center">
+        <h1 className="text-2xl md:text-4xl text-white font-bold text-center mb-3">
           Our Gallery
         </h1>
 
