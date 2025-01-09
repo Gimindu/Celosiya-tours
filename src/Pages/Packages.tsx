@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import packageBackground from "@/assets/images/package_bg.png";
+import packageBackground from "@/assets/images/background_img/package_bg.png";
 import packageex from "@/assets/images/packageex.png";
 
 export default function Packages() {

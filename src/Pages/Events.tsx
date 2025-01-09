@@ -1,4 +1,4 @@
-import eventBackground from "@/assets/images/event-background.png";
+import eventBackground from "@/assets/images/background_img/event-background.png";
 import events from "@/assets/images/events.png";
 
 export default function Events() {

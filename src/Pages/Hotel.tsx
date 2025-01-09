@@ -1,5 +1,5 @@
 import React from "react";
-import eventBackground from "@/assets/images/event-background.png";
+import eventBackground from "@/assets/images/background_img/event-background.png";
 import { FaBed, FaCoffee, FaBath, FaUtensils, FaConciergeBell } from "react-icons/fa";
 
 export default function Hotel() {

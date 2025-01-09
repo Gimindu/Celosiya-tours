@@ -108,7 +108,7 @@ export default function ContactUs() {
     <>
       <div
         id="contact-us"
-        className="relative bg-[url('./assets/images/ContactUs.png')] bg-cover bg-center min-h-screen flex flex-col "
+        className="relative bg-[url('./assets/images/background_img/ContactUs.png')] bg-cover bg-center min-h-screen flex flex-col "
       >
         <div className="flex-grow flex items-center justify-center mt-14">
           <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-2xl p-10 w-[90%] max-w-4xl mt-20 mb-10">

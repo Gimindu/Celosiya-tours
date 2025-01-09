@@ -16,7 +16,7 @@ export default function Review() {
   return (
     <div
       id="Reviews"
-      className="relative bg-[url('./assets/images/reviewBg.png')] bg-cover bg-center min-h-screen flex flex-col"
+      className="relative bg-[url('./assets/images/background_img/reviewBg.png')] bg-cover bg-center min-h-screen flex flex-col"
     >
       <div className="flex-grow flex items-center justify-center">
         {/* Glassmorphic Form Container */}
