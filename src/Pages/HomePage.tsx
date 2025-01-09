@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <div
         id="home"
-        className="bg-[url('./assets/images/background_img/sg.png')] bg-cover h-screen flex flex-col items-center justify-center relative"
+        className="bg-[url('./assets/images/background_img/sg.avif')] bg-cover h-screen flex flex-col items-center justify-center relative"
       >
         <p className="text-white text-center px-4 sm:px-8 lg:px-32 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-12 sm:mb-20 mt-12">
           "No matter where <br /> you want to go, we will <br /> take you there"
