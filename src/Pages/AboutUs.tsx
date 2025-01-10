@@ -1,5 +1,5 @@
-import topImage from '../assets/images/heading.png';
-import rightImage from '../assets/images/aboutus.png';
+import topImage from '../assets/images/heading.avif';
+import rightImage from '../assets/images/aboutus.avif';
 
 export default function AboutUs() {
   return (

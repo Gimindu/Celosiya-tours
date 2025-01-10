@@ -1,8 +1,8 @@
-import revew1 from '@/assets/images/reviews/Reviews1.png';
-import revew2 from '@/assets/images/reviews/Reviews2.png';
-import revew3 from '@/assets/images/reviews/Reviews3.png';
-import revew4 from '@/assets/images/reviews/Reviews4.png';
-import revew5 from '@/assets/images/reviews/Reviews5.png';
+import revew1 from '@/assets/images/reviews/Reviews1.avif';
+import revew2 from '@/assets/images/reviews/Reviews2.avif';
+import revew3 from '@/assets/images/reviews/Reviews3.avif';
+import revew4 from '@/assets/images/reviews/Reviews4.avif';
+import revew5 from '@/assets/images/reviews/Reviews5.avif';
 
 import {
   Carousel,

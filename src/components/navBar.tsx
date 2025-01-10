@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/images/logo.png"; // Import logo image
+import logo from "@/assets/images/logo design t.avif"; // Import logo image
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ function NavBar() {
         <img
           src={logo}
           alt="Logo"
-          className="h-12 w-auto cursor-pointer" // Add cursor pointer to indicate it's clickable
+          className="h-16 w-auto cursor-pointer" // Add cursor pointer to indicate it's clickable
           onClick={handleLogoClick} // Add click handler for logo
         />
       </div>

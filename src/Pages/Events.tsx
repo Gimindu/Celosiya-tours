@@ -1,5 +1,5 @@
 import eventBackground from "@/assets/images/background_img/event-background.avif";
-import events from "@/assets/images/events.png";
+import events from "@/assets/images/events.avif";
 
 export default function Events() {
   return (
