@@ -1,8 +1,8 @@
-import revew1 from '@/assets/images/reviews/Reviews1.png';
-import revew2 from '@/assets/images/reviews/Reviews2.png';
-import revew3 from '@/assets/images/reviews/Reviews3.png';
-import revew4 from '@/assets/images/reviews/Reviews4.png';
-import revew5 from '@/assets/images/reviews/Reviews5.png';
+import revew1 from '@/assets/images/reviews/Reviews1.avif';
+import revew2 from '@/assets/images/reviews/Reviews2.avif';
+import revew3 from '@/assets/images/reviews/Reviews3.avif';
+import revew4 from '@/assets/images/reviews/Reviews4.avif';
+import revew5 from '@/assets/images/reviews/Reviews5.avif';
 
 import {
   Carousel,
@@ -16,7 +16,7 @@ export default function Review() {
   return (
     <div
       id="Reviews"
-      className="relative bg-[url('./assets/images/reviewBg.png')] bg-cover bg-center min-h-screen flex flex-col"
+      className="relative bg-[url('./assets/images/background_img/reviewBg.avif')] bg-cover bg-center min-h-screen flex flex-col"
     >
       <div className="flex-grow flex items-center justify-center">
         {/* Glassmorphic Form Container */}

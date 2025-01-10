@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Gallery() {
-  const backgroundImage = "url(/Gallery/pexels-tomas-malik-793526-1998434.jpg)";
+  const backgroundImage = "url(/Gallery/pexels-tomas-malik-793526-1998434.avif)";
   const divStyle = {
     backgroundImage: backgroundImage,
     backgroundSize: "cover",
@@ -10,18 +10,18 @@ export default function Gallery() {
   };
 
   const galleryData = [
-    { id: 1, title: "National Parks", imageUrl: "/Gallery/elephants-4864736.jpg" },
-    { id: 2, title: "nine arch bridge", imageUrl: "/Gallery/nine-arch-bridge-5657721.jpg" },
-    { id: 3, title: "Sigiri", imageUrl: "/Gallery/sigiriya-459197.jpg" },
-    { id: 4, title: "Mirissa", imageUrl: "/Gallery/sri-lanka-4580991.jpg" },
-    { id: 5, title: "Mahabodhi Temple", imageUrl: "/Gallery/stairs-3209618.jpg" },
-    { id: 6, title: "Charminar", imageUrl: "/Gallery/sri-lanka-4580991.jpg" },
-    { id: 7, title: "Beautiful Beach side", imageUrl: "/Gallery/a.jpg" },
-    { id: 8, title: "Religious places", imageUrl: "/Gallery/b.jpg" },
-    { id: 9, title: "Incredible architecture", imageUrl: "/Gallery/c.jpg" },
-    { id: 10, title: "lotus tower", imageUrl: "/Gallery/d.jpg" },
-    { id: 11, title: "Temple of the tooth", imageUrl: "/Gallery/e.jpg" },
-    { id: 12, title: "Surfing", imageUrl: "/Gallery/h.jpg" },
+    { id: 1, title: "National Parks", imageUrl: "/Gallery/elephants-4864736.avif" },
+    { id: 2, title: "nine arch bridge", imageUrl: "/Gallery/nine-arch-bridge-5657721.avif" },
+    { id: 3, title: "Sigiri", imageUrl: "/Gallery/sigiriya-459197.avif" },
+    { id: 4, title: "Mirissa", imageUrl: "/Gallery/sri-lanka-4580991.avif" },
+    { id: 5, title: "Mahabodhi Temple", imageUrl: "/Gallery/stairs-3209618.avif" },
+    { id: 6, title: "Charminar", imageUrl: "/Gallery/sri-lanka-4580991.avif" },
+    { id: 7, title: "Beautiful Beach side", imageUrl: "/Gallery/a.avif" },
+    { id: 8, title: "Religious places", imageUrl: "/Gallery/b.avif" },
+    { id: 9, title: "Incredible architecture", imageUrl: "/Gallery/c.avif" },
+    { id: 10, title: "lotus tower", imageUrl: "/Gallery/d.avif" },
+    { id: 11, title: "Temple of the tooth", imageUrl: "/Gallery/e.avif" },
+    { id: 12, title: "Surfing", imageUrl: "/Gallery/h.avif" },
   ];
 
   const [selectedImage, setSelectedImage] = useState(galleryData[0]);

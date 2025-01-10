@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import packageBackground from "@/assets/images/package_bg.png";
-import packageex from "@/assets/images/packageex.png";
+import packageBackground from "@/assets/images/background_img/package_bg.avif";
+import packageex from "@/assets/images/packageex.avif";
 
 export default function Packages() {
   const navigate = useNavigate(); // Initialize navigation hook

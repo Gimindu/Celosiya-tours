@@ -1,9 +1,9 @@
-import topImage from '../assets/images/heading.png';
-import rightImage from '../assets/images/aboutus.png';
+import topImage from '../assets/images/heading.avif';
+import rightImage from '../assets/images/aboutus.avif';
 
 export default function AboutUs() {
   return (
-    <div id="about-us" className="bg-[url('./assets/images/aboutbg.png')] bg-cover bg-center h-screen relative">
+    <div id="about-us" className="bg-[url('./assets/images/background_img/aboutbg.avif')] bg-cover bg-center h-screen relative">
       {/* Top center image */}
       <div className="absolute top-16 sm:top-24 left-0 w-full flex justify-center">
         <img src={topImage} alt="Top Image" className="w-30 sm:w-30 h-auto" />
