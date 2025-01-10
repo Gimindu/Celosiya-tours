@@ -1,4 +1,4 @@
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo design t.avif';
 
 export default function Footer() {
   return (
@@ -14,16 +14,16 @@ export default function Footer() {
             Travel helps companies manage payments easily.
           </p>
           <div className="flex gap-4 justify-center md:justify-start mt-4"> 
-            <a href="#linkedin" aria-label="LinkedIn" className="text-orange-600 hover:text-white">
+            <a href="#linkedin" aria-label="LinkedIn" className="text-orange-500 hover:text-white">
               <i className="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#messenger" aria-label="Messenger" className="text-orange-600 hover:text-white">
+            <a href="#messenger" aria-label="Messenger" className="text-orange-500 hover:text-blue-500">
               <i className="fab fa-facebook-messenger fa-lg"></i>
             </a>
-            <a href="#twitter" aria-label="Twitter" className="text-orange-600 hover:text-white">
+            <a href="#twitter" aria-label="Twitter" className="text-orange-500 hover:text-blue-400">
               <i className="fab fa-twitter fa-lg"></i>
             </a>
-            <a href="#other" aria-label="Other" className="text-orange-600 hover:text-white">
+            <a href="#other" aria-label="Other" className="text-orange-500 hover:text-blue-400">
               <i className="fas fa-globe fa-lg"></i>
             </a>
           </div>
