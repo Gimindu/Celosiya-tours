@@ -85,38 +85,43 @@ export default function AllPackages() {
         id="AllPackages"
         className="relative flex flex-col items-center"
       >
-        <h1 className="text-3xl md:text-4xl text-white font-bold absolute mt-24 md:mt-24 lg:mt-28">
-          All Packages
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center mb-8 mt-8">
+      All Packages
         </h1>
 
         {/* Card Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mx-8 gap-8 mt-56">
-          {packages.map((pkg, index) => (
-            <div className="max-w-sm w-full lg:max-w-full lg:flex relative" key={index}>
-              <div
-                className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-                style={{ backgroundImage: `url(${packageex})` }}
-                title="Package Image"
-              ></div>
-              <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white/30 backdrop-blur-lg rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                <div className="mb-8">
-                  <div className="text-white font-bold text-xl mb-2">{pkg.title}</div>
-                  <p className="text-white text-base">{pkg.description}</p>
-                </div>
-                {/* <div className="flex items-center">
-                  <ul className="text-white text-sm list-inside">
-                    {pkg.details.map((detail, detailIndex) => (
-                      <li key={detailIndex}>• {detail}</li>
-                    ))}
-                  </ul>
-                </div> */}
-                <button className="bg-[#DF6951] text-white px-4 py-2 absolute bottom-4 right-4 w-54 rounded-full hover:bg-[#D56C4C] transition duration-300">
-                  Contact for More details
-                </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+        {packages.map((pkg, index) => (
+          <div
+            className="max-w-full w-full flex flex-col lg:flex-row bg-white/30 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden"
+            key={index}
+          >
+            <div
+              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
+              style={{ backgroundImage: `url(${packageex})` }}
+              title="Package Image"
+            ></div>
+            <div className="p-6 flex flex-col justify-between">
+              <div className="mb-4">
+                <h2 className="text-white font-bold text-lg md:text-xl mb-2">
+                  {pkg.title}
+                </h2>
+                <p className="text-white text-sm md:text-base">
+                  {pkg.description}
+                </p>
               </div>
+              <ul className="text-white text-sm list-inside mb-4">
+                {pkg.details.map((detail, detailIndex) => (
+                  <li key={detailIndex}>• {detail}</li>
+                ))}
+              </ul>
+              <button className="bg-[#DF6951] text-white px-4 py-2 w-full rounded-full hover:bg-[#D56C4C] transition duration-300">
+                Contact for More details
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       </div>
     </div>
   );

@@ -35,6 +35,9 @@ export default function Packages() {
         backgroundImage: `url(${packageBackground})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundAttachment: 'fixed',
+        minHeight: '100vh',
+        width: '100%',
       }}
       className="relative flex flex-col items-center py-16 px-4 sm:px-8 md:px-12 lg:px-20"
     >
