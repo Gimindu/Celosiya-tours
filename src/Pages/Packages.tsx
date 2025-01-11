@@ -1,6 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import packageBackground from "@/assets/images/background_img/package_bg.avif";
 import packageex from "@/assets/images/packageex.avif";
+import ella from '@/assets/images/Packages/Ella.jpg';
+import Sigiriya from '@/assets/images/Packages/Sigiriya.jpg';
+import kandy from '@/assets/images/Packages/Kandy.jpg';
+import NuwaraEliya from '@/assets/images/Packages/NuwaraEliya.jpg';
+
 
 export default function Packages() {
   const navigate = useNavigate(); // Initialize navigation hook
@@ -10,6 +15,7 @@ export default function Packages() {
       title: ' Ella',
       description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      image: ella,
     },
     {
       title: 'Sigiriya',
@@ -55,7 +61,7 @@ export default function Packages() {
           >
             <div
               className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
-              style={{ backgroundImage: `url(${packageex})` }}
+              style={{ backgroundImage: `url(${pkg.image})` }}
               title="Package Image"
             ></div>
             <div className="p-6 flex flex-col justify-between">
