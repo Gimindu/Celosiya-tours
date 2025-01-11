@@ -10,6 +10,9 @@ import yala from '@/assets/images/Packages/Yala.jpg';
 import trinco from '@/assets/images/Packages/Trincomalee.jpg';
 import udawalawa from '@/assets/images/Packages/Udawalawa.jpg';
 import polonnaruwa from '@/assets/images/Packages/Polonnaruwa.jpg';
+import anuradhapura from '@/assets/images/Packages/Anuradhapura.jfif';
+import kaluthara from '@/assets/images/Packages/Kalutara.jpg';
+import mirissa from '@/assets/images/Packages/Mirissa.jpg';
 
 
 
@@ -73,6 +76,7 @@ export default function AllPackages() {
       title: 'Anuradhapura  ',
       description: 'Explore ancient ruins, the Ranmasu Uyana Stargate, and the serene Isurumuniya Temple in this historical capital.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+      image: anuradhapura,
     },
     {
       title: ' Polonnaruwa  ',
@@ -84,11 +88,13 @@ export default function AllPackages() {
       title: 'Kalutara ',
       description: 'Kalutara features sacred sites, scenic falls, the Sinharaja Rainforest, and vibrant river safaris.',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      image: kaluthara,
     },
     {
       title: ' Mirissa ',
       description: 'Mirissa offers whale watching, surfing, and beach relaxation. Visit the Weligama fishing village and the iconic Parrot Rock.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      image: mirissa,
     },
   ];
 
