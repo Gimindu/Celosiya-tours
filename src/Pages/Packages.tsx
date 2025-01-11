@@ -1,38 +1,40 @@
 import { useNavigate } from "react-router-dom";
 import packageBackground from "@/assets/images/background_img/package_bg.avif";
-import packageex from "@/assets/images/packageex.avif";
-import ella from '@/assets/images/Packages/Ella.jpg';
-import Sigiriya from '@/assets/images/Packages/Sigiriya.jpg';
-import kandy from '@/assets/images/Packages/Kandy.jpg';
-import NuwaraEliya from '@/assets/images/Packages/NuwaraEliya.jpg';
-
+import ella from "@/assets/images/Packages/Ella.jpg";
+import Sigiriya from "@/assets/images/Packages/Sigiriya.jpg";
+import kandy from "@/assets/images/Packages/Kandy.jpg";
+import NuwaraEliya from "@/assets/images/Packages/NuwaraEliya.jpg";
 
 export default function Packages() {
-  const navigate = useNavigate(); // Initialize navigation hook
+  const navigate = useNavigate();
 
   const packages = [
     {
-      title: ' Ella',
-      description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
-      details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      title: "Ella",
+      description:
+        "Ella offers stunning hill views and tranquility. Visit Mini Adam's Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.",
+      details: ["5 Days", "4 Nights", "Breakfast", "Transportation"],
       image: ella,
     },
     {
-      title: 'Sigiriya',
-      description: 'Discover the UNESCO-listed Sigiriya Rock Fortress, Pidurangala, Dambulla Cave Temple, and Minneriya National Park. Experience local culture with a village safari.  ',
-      details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+      title: "Sigiriya",
+      description:
+        "Discover the UNESCO-listed Sigiriya Rock Fortress, Pidurangala, Dambulla Cave Temple, and Minneriya National Park. Experience local culture with a village safari.",
+      details: ["7 Days", "6 Nights", "All Meals", "Guided Tours"],
       image: Sigiriya,
     },
     {
-      title: 'Kandy ',
-      description: 'Explore Kandy’s Temple of the Tooth Relic, Royal Botanical Gardens, and traditional craftsmanship. Enjoy panoramic views, a dancing show, and an elephant ride.  ',
-      details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+      title: "Kandy",
+      description:
+        "Explore Kandy’s Temple of the Tooth Relic, Royal Botanical Gardens, and traditional craftsmanship. Enjoy panoramic views, a dancing show, and an elephant ride.",
+      details: ["4 Days", "3 Nights", "Local Cuisine", "Private Guide"],
       image: kandy,
     },
     {
-      title: 'Nuwara Eliya  ',
-      description: 'Known as "Little England," it features tea factories, Haggala Botanical Gardens, and the colonial-era Nuwara Eliya Post Office.  ',
-      details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      title: "Nuwara Eliya",
+      description:
+        'Known as "Little England," it features tea factories, Haggala Botanical Gardens, and the colonial-era Nuwara Eliya Post Office.',
+      details: ["10 Days", "9 Nights", "Gourmet Dining", "VIP Transportation"],
       image: NuwaraEliya,
     },
   ];
@@ -44,9 +46,9 @@ export default function Packages() {
         backgroundImage: `url(${packageBackground})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        width: '100%',
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
+        width: "100%",
       }}
       className="relative flex flex-col items-center py-16 px-4 sm:px-8 md:px-12 lg:px-20"
     >
@@ -56,17 +58,20 @@ export default function Packages() {
       </h1>
 
       {/* Card Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
         {packages.map((pkg, index) => (
           <div
-            className="max-w-full w-full flex flex-col lg:flex-row bg-white/30 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden"
             key={index}
+            className="w-full flex flex-col bg-white/30 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform"
           >
+            {/* Package Image */}
             <div
-              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
+              className="h-56 bg-cover bg-center rounded-t-lg"
               style={{ backgroundImage: `url(${pkg.image})` }}
-              title="Package Image"
+              title={pkg.title}
             ></div>
+
+            {/* Package Details */}
             <div className="p-6 flex flex-col justify-between">
               <div className="mb-4">
                 <h2 className="text-white font-bold text-lg md:text-xl mb-2">
@@ -82,7 +87,7 @@ export default function Packages() {
                 ))}
               </ul>
               <button className="bg-[#DF6951] text-white px-4 py-2 w-full rounded-full hover:bg-[#D56C4C] transition duration-300">
-                Contact for More details
+                Contact for More Details
               </button>
             </div>
           </div>
