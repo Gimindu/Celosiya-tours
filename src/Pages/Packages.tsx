@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import packageBackground from "@/assets/images/background_img/package_bg.avif";
-import packageex from "@/assets/images/packageex.avif";
-import ella from '@/assets/images/Packages/Ella.jpg';
+import packageBackground from "@/assets/images/background_img/package_bg.avif";import yala from '@/assets/images/Packages/Yala.jpg';
 import Sigiriya from '@/assets/images/Packages/Sigiriya.jpg';
 import kandy from '@/assets/images/Packages/Kandy.jpg';
 import NuwaraEliya from '@/assets/images/Packages/NuwaraEliya.jpg';
@@ -12,10 +10,10 @@ export default function Packages() {
 
   const packages = [
     {
-      title: ' Ella',
-      description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
+      title: 'Yala National Park',
+      description: 'Spot leopards, elephants, and exotic wildlife on an exhilarating safari in Yala National Park. Visit the ancient Sithulpawwa Rock Temple and the Kataragama Temple.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
-      image: ella,
+      image: yala,
     },
     {
       title: 'Sigiriya',
@@ -62,11 +60,13 @@ export default function Packages() {
             className="max-w-full w-full flex flex-col lg:flex-row bg-white/30 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden"
             key={index}
           >
-            <div
-              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
-              style={{ backgroundImage: `url(${pkg.image})` }}
-              title="Package Image"
-            ></div>
+             <div className="h-48 lg:h-auto lg:w-48 flex-none">
+                <img
+                  src={pkg.image}
+                  alt={`${pkg.title} Image`}
+                  className="h-full w-full object-cover"
+                />
+              </div>
             <div className="p-6 flex flex-col justify-between">
               <div className="mb-4">
                 <h2 className="text-white font-bold text-lg md:text-xl mb-2">
