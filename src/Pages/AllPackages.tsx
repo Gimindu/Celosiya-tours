@@ -6,6 +6,10 @@ import kandy from '@/assets/images/Packages/Kandy.jpg';
 import Sigiriya from '@/assets/images/Packages/Sigiriya.jpg';
 import NuwaraEliya from '@/assets/images/Packages/NuwaraEliya.jpg';
 import Galle from '@/assets/images/Packages/Galle.jpg';
+import yala from '@/assets/images/Packages/Yala.jpg';
+import trinco from '@/assets/images/Packages/Trincomalee.jpg';
+import udawalawa from '@/assets/images/Packages/Udawalawa.jpg';
+import polonnaruwa from '@/assets/images/Packages/Polonnaruwa.jpg';
 
 
 
@@ -39,16 +43,19 @@ export default function AllPackages() {
       title: 'Yala National Park',
       description: 'Spot leopards, elephants, and exotic wildlife on an exhilarating safari in Yala National Park. Visit the ancient Sithulpawwa Rock Temple and the Kataragama Temple.  ',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      image: yala,
     },
     {
       title: 'Trincomalee',
       description: 'Trincomalee offers culture and coastal beauty with Thirukeshwaram Temple, Marble Beach, Nilaveli Beach, and Pigeon Island.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+      image: trinco,
     },
     {
       title: 'Udawalawa National Park',
       description: 'Visit Udawalawa National Park to see elephants, crocodiles, and birds. Explore the Elephant Transit Home and the Sankapala Raja Maha Viharaya Temple.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+      image: udawalawa,
     },
     {
       title: 'Colombo  ',
@@ -71,6 +78,7 @@ export default function AllPackages() {
       title: ' Polonnaruwa  ',
       description: 'Discover Polonnaruwa’s ancient city and serene Parakrama Samudraya Lake, showcasing Sri Lanka’s royal history.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+      image: polonnaruwa,
     },
     {
       title: 'Kalutara ',
