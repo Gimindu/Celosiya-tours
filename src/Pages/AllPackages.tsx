@@ -1,5 +1,6 @@
 import packageBackground from '@/assets/images/background_img/package_bg.avif';
 import packageex from '@/assets/images/packageex.avif';
+import ella from '@/assets/images/Packages/Ella.jpg';
 
 export default function AllPackages() {
   const packages = [
@@ -7,6 +8,7 @@ export default function AllPackages() {
       title: ' Ella',
       description: 'Ella offers stunning hill views and tranquility. Visit Mini Adam\'s Peak, Nine Arches Bridge, and Ravana Falls. Enjoy tea plantations, an Ayurvedic garden, and a scenic train ride.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      image: ella,
     },
     {
       title: 'Sigiriya',
@@ -98,7 +100,7 @@ export default function AllPackages() {
           >
             <div
               className="h-48 lg:h-auto lg:w-48 flex-none bg-cover"
-              style={{ backgroundImage: `url(${packageex})` }}
+              style={{ backgroundImage: `url(${pkg.image})` }}
               title="Package Image"
             ></div>
             <div className="p-6 flex flex-col justify-between">
