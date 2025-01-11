@@ -1,6 +1,13 @@
 import packageBackground from '@/assets/images/background_img/package_bg.avif';
 import packageex from '@/assets/images/packageex.avif';
 import ella from '@/assets/images/Packages/Ella.jpg';
+import colombo from '@/assets/images/Packages/Colombo.jpg';
+import kandy from '@/assets/images/Packages/Kandy.jpg';
+import Sigiriya from '@/assets/images/Packages/Sigiriya.jpg';
+import NuwaraEliya from '@/assets/images/Packages/NuwaraEliya.jpg';
+import Galle from '@/assets/images/Packages/Galle.jpg';
+
+
 
 export default function AllPackages() {
   const packages = [
@@ -14,16 +21,19 @@ export default function AllPackages() {
       title: 'Sigiriya',
       description: 'Discover the UNESCO-listed Sigiriya Rock Fortress, Pidurangala, Dambulla Cave Temple, and Minneriya National Park. Experience local culture with a village safari.  ',
       details: ['7 Days', '6 Nights', 'All Meals', 'Guided Tours'],
+      image: Sigiriya,
     },
     {
       title: 'Kandy ',
       description: 'Explore Kandy’s Temple of the Tooth Relic, Royal Botanical Gardens, and traditional craftsmanship. Enjoy panoramic views, a dancing show, and an elephant ride.  ',
       details: ['4 Days', '3 Nights', 'Local Cuisine', 'Private Guide'],
+      image: kandy,
     },
     {
       title: 'Nuwara Eliya  ',
       description: 'Known as "Little England," it features tea factories, Haggala Botanical Gardens, and the colonial-era Nuwara Eliya Post Office.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      image: NuwaraEliya,
     },
     {
       title: 'Yala National Park',
@@ -44,11 +54,13 @@ export default function AllPackages() {
       title: 'Colombo  ',
       description: 'Colombo combines history and modernity with landmarks like Gangaramaya Temple, Galle Face, the National Museum, and vibrant city tours.  ',
       details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
+      image: colombo,
     },
     {
       title: 'Galle ',
       description: 'Galle boasts historic charm with its Fort, lighthouse, turtle farms, antique shops, and stunning beaches like Unawatuna.',
       details: ['5 Days', '4 Nights', 'Breakfast', 'Transportation'],
+      image: Galle,
     },
     {
       title: 'Anuradhapura  ',
