@@ -14,7 +14,7 @@ export default function Gallery() {
     { id: 2, title: "nine arch bridge", imageUrl: "/Gallery/nine-arch-bridge-5657721.avif" },
     { id: 3, title: "Sigiri", imageUrl: "/Gallery/sigiriya-459197.avif" },
     { id: 4, title: "Mirissa", imageUrl: "/Gallery/sri-lanka-4580991.avif" },
-    { id: 5, title: "Mahabodhi Temple", imageUrl: "/Gallery/stairs-3209618.avif" },
+    { id: 5, title: "Ancient architecture", imageUrl: "/Gallery/stairs-3209618.avif" },
     { id: 6, title: "Charminar", imageUrl: "/Gallery/sri-lanka-4580991.avif" },
     { id: 7, title: "Beautiful Beach side", imageUrl: "/Gallery/a.avif" },
     { id: 8, title: "Religious places", imageUrl: "/Gallery/b.avif" },
