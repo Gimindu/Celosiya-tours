@@ -15,7 +15,9 @@ export default function AboutUs() {
           We Provide You The Best <br /> Srilankan Sightseeing Tours
         </h2>
         <p className="mt-2 sm:mt-4 text-sm sm:text-lg text-left sm:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          At Celosiya Tours, we specialize in providing unforgettable travel experiences. From expert tour guiding and comfortable transportation to quality accommodations, we handle all the details of your journey. Whether you're exploring new destinations or relaxing at your stay, our dedicated team ensures a seamless, memorable experience every time.
+
+
         </p>
 
         {/* Smooth scrolling to Packages section */}
