@@ -14,10 +14,16 @@ import kaluthara from '@/assets/images/Packages/Kalutara.avif';
 import mirissa from '@/assets/images/Packages/Mirissa.avif';
 import { useEffect } from "react";
 
-export default function AllPackages() {
+
+const useScrollToTop = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    // Scroll to the top immediately after the component is mounted.
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array ensures this runs once after mount.
+};
+export default function AllPackages() {
+  useScrollToTop();
+
   const packages = [
     
     {
