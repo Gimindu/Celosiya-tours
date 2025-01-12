@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <div id="about-us" className="bg-[url('./assets/images/background_img/aboutbg.avif')] bg-cover bg-center h-screen relative">
       {/* Top center image */}
-      <div className="absolute top-16 sm:top-24 left-0 w-full flex justify-center px-4 sm:px-0">
+      <div className="absolute top-16 sm:top-24 left-0 w-full flex justify-center px-4 mt-10">
         <img src={topImage} alt="Top Image" className="w-30 sm:w-30 h-auto" />
       </div>
 
