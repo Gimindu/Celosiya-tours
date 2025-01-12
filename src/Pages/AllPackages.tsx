@@ -1,5 +1,4 @@
 import packageBackground from '@/assets/images/background_img/package_bg.avif';
-import packageex from '@/assets/images/packageex.avif';
 import ella from '@/assets/images/Packages/Ella.jpg';
 import colombo from '@/assets/images/Packages/Colombo.jpg';
 import kandy from '@/assets/images/Packages/Kandy.jpg';
@@ -13,8 +12,12 @@ import polonnaruwa from '@/assets/images/Packages/Polonnaruwa.jpg';
 import anuradhapura from '@/assets/images/Packages/Anuradhapura.jfif';
 import kaluthara from '@/assets/images/Packages/Kalutara.jpg';
 import mirissa from '@/assets/images/Packages/Mirissa.jpg';
+import { useEffect } from "react";
 
 export default function AllPackages() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const packages = [
     
     {
@@ -107,6 +110,7 @@ export default function AllPackages() {
         backgroundAttachment: 'fixed',
         minHeight: '100vh',
         width: '100%',
+        willChange: 'scroll',
       }}
     >
       <div  className="relative flex flex-col items-center py-16 px-4 sm:px-8 md:px-12 lg:px-20">
@@ -142,8 +146,17 @@ export default function AllPackages() {
                     <li key={detailIndex}>• {detail}</li>
                   ))}
                 </ul>
-                <button className="bg-[#DF6951] text-white px-4 py-2 w-full rounded-full hover:bg-[#D56C4C] transition duration-300">
-                  Contact for More details
+                <button
+                className="bg-[#DF6951] text-white px-4 py-2 w-full rounded-full hover:bg-[#D56C4C] transition duration-300"
+                onClick={() => {
+                  const message = `Hi, I'm interested in the "${pkg.title}" package. Can you provide more details? Thanks!`;  
+                  const encodedMessage = encodeURIComponent(message);
+                  const phoneNumber = "+94702992332";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`; // Replace '1234567890' with your WhatsApp number.
+                  window.open(whatsappUrl, "_blank");
+                }}
+              >                  
+              Contact for More details
                 </button>
               </div>
             </div>
