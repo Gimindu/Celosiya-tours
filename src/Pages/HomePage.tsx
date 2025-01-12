@@ -1,7 +1,7 @@
 import image1 from "../assets/images/Services/guided-tours.avif";
 import image2 from "../assets/images/Services/tarnsportop.avif";
 import image3 from "../assets/images/Services/religious.avif";
-import image4 from "../assets/images/Services/support.avif";
+import image4 from "../assets/images/Services/contactsup.png";
 
 export default function HomePage() {
   return (
