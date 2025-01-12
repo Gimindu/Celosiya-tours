@@ -84,7 +84,7 @@ function NavBar() {
 
       {/* Mobile Menu */}
       <ul
-        className={`md:hidden absolute top-16 left-0 w-full bg-black/50 text-white p-4 ${
+        className={`md:hidden absolute top-24 left-0 w-full bg-black/50 text-white p-4 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
