@@ -23,7 +23,7 @@ export default function AboutUs() {
         {/* Smooth scrolling to Packages section */}
         <a
           href="#packages"
-          className="bg-[#DF6951] text-white px-4 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300 mt-4 inline-block"
+          className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-[#DF6951] transition duration-300 mt-4 inline-block"
         >
           View Packages
         </a>

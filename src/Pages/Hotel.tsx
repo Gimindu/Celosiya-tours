@@ -51,7 +51,7 @@ export default function Hotel() {
             {/* Right Side: Description */}
             <div className="flex flex-col justify-center text-white space-y-6">
               <h2 className="text-2xl md:text-4xl font-extrabold text-center md:text-left">
-                Welcome to Our Hotel
+                Welcome to Our Wila
               </h2>
               <p className="text-sm md:text-base lg:text-xl text-justify">
                 Experience the perfect blend of luxury and comfort at our hotel. Nestled in the heart of the city, our hotel

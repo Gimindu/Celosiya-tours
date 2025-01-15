@@ -105,7 +105,7 @@ export default function Packages() {
       {/* Navigation Button */}
       <div className="mt-12">
         <button
-          className="bg-[#DF6951] text-white px-6 py-2 rounded-full hover:bg-[#D56C4C] transition duration-300"
+          className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-[#DF6951] transition duration-300"
           onClick={() => navigate("/all_packages")}
         >
           Show More

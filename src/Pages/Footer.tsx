@@ -17,13 +17,13 @@ export default function Footer() {
             <a href="#linkedin" aria-label="LinkedIn" className="text-orange-500 hover:text-white">
               <i className="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#messenger" aria-label="Messenger" className="text-orange-500 hover:text-blue-500">
+            <a href="#messenger" aria-label="Messenger" className="text-orange-500 hover:text-white">
               <i className="fab fa-facebook-messenger fa-lg"></i>
             </a>
-            <a href="#twitter" aria-label="Twitter" className="text-orange-500 hover:text-blue-400">
+            <a href="#twitter" aria-label="Twitter" className="text-orange-500 hover:text-white">
               <i className="fab fa-twitter fa-lg"></i>
             </a>
-            <a href="#other" aria-label="Other" className="text-orange-500 hover:text-blue-400">
+            <a href="#other" aria-label="Other" className="text-orange-500 hover:text-white">
               <i className="fas fa-globe fa-lg"></i>
             </a>
           </div>
