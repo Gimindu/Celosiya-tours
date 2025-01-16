@@ -1,14 +1,21 @@
 import React from "react";
 import eventBackground from "@/assets/images/background_img/event-background.avif";
+import image1 from "@/assets/hotel/wila photos.avif";
+import image2 from "@/assets/hotel/2.avif";
+import image3 from "@/assets/hotel/3.avif";
+import image4 from "@/assets/hotel/4.avif";
+import image5 from "@/assets/hotel/5.avif";
+import image6 from "@/assets/hotel/6.avif";
+
 import { FaBed, FaCoffee, FaBath, FaUtensils, FaConciergeBell } from "react-icons/fa";
 
 export default function Hotel() {
   const data = [
-    { imgelink: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=1470&q=80" },
-    { imgelink: "https://images.unsplash.com/photo-1432462770865-65b70566d673?auto=format&fit=crop&w=1950&q=80" },
-    { imgelink: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=2940&q=80" },
-    { imgelink: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?auto=format&fit=crop&w=2762&q=80" },
-    { imgelink: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?auto=format&fit=crop&w=2832&q=80" },
+    { imgelink: image1 },
+    { imgelink: image2 },
+    { imgelink: image3 },
+    { imgelink: image4 },
+    { imgelink: image5 },
   ];
 
   const [active, setActive] = React.useState(data[0].imgelink);
