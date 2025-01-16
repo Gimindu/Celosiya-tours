@@ -1,11 +1,17 @@
 import React from "react";
 import eventBackground from "@/assets/images/background_img/event-background.avif";
-import image1 from "@/assets/hotel/wila photos.avif";
-import image2 from "@/assets/hotel/2.avif";
-import image3 from "@/assets/hotel/3.avif";
+import image1 from "@/assets/hotel/21.avif";
+import image2 from "@/assets/hotel/17.avif";
+import image3 from "@/assets/hotel/7.avif";
 import image4 from "@/assets/hotel/4.avif";
-import image5 from "@/assets/hotel/5.avif";
-import image6 from "@/assets/hotel/6.avif";
+import image5 from "@/assets/hotel/13.avif";
+import image6 from "@/assets/hotel/15.avif";
+import image7 from "@/assets/hotel/20.avif";
+import image8 from "@/assets/hotel/11.avif";
+import image9 from "@/assets/hotel/23.avif";
+import image10 from "@/assets/hotel/24.avif";
+
+
 
 import { FaBed, FaCoffee, FaBath, FaUtensils, FaConciergeBell } from "react-icons/fa";
 
@@ -16,6 +22,11 @@ export default function Hotel() {
     { imgelink: image3 },
     { imgelink: image4 },
     { imgelink: image5 },
+    { imgelink: image6 },
+    { imgelink: image7 },
+    { imgelink: image8 },
+    { imgelink: image9 },
+    { imgelink: image10 },
   ];
 
   const [active, setActive] = React.useState(data[0].imgelink);
@@ -40,7 +51,7 @@ export default function Hotel() {
                 src={active}
                 alt="Featured gallery"
               />
-              <div className="grid grid-cols-5 gap-4">
+              <div className="grid grid-cols-10 gap-1">
                 {data.map(({ imgelink }, index) => (
                   <img
                     key={index}
