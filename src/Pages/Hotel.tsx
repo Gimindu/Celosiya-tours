@@ -36,7 +36,7 @@ export default function Hotel() {
             {/* Left Side: Photos */}
             <div className="grid gap-6">
               <img
-                className="w-full rounded-lg object-cover object-center"
+                className="w-full h-96 rounded-lg object-cover object-center"
                 src={active}
                 alt="Featured gallery"
               />
@@ -46,7 +46,7 @@ export default function Hotel() {
                     key={index}
                     onClick={() => setActive(imgelink)}
                     src={imgelink}
-                    className={`h-24 cursor-pointer rounded-lg object-cover object-center ${
+                    className={`h-24 w-24 cursor-pointer rounded-lg object-cover object-center ${
                       active === imgelink ? "border-4 border-blue-500" : ""
                     }`}
                     alt={`Thumbnail ${index + 1}`}
