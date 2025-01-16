@@ -11,9 +11,13 @@ import image8 from "@/assets/hotel/11.avif";
 import image9 from "@/assets/hotel/23.avif";
 import image10 from "@/assets/hotel/24.avif";
 
-
-
-import { FaBed, FaCoffee, FaBath, FaUtensils, FaConciergeBell } from "react-icons/fa";
+import {
+  FaBed,
+  FaCoffee,
+  FaBath,
+  FaUtensils,
+  FaConciergeBell,
+} from "react-icons/fa";
 
 export default function Hotel() {
   const data = [
@@ -69,21 +73,39 @@ export default function Hotel() {
             {/* Right Side: Description */}
             <div className="flex flex-col justify-center text-white space-y-6">
               <h2 className="text-2xl md:text-4xl font-extrabold text-center md:text-left">
-                Welcome to Our Wila
+                Welcome to Our Villa
               </h2>
               <p className="text-sm md:text-base lg:text-xl text-justify">
-                Experience the perfect blend of luxury and comfort at our hotel. Nestled in the heart of the city, our hotel
-                offers world-class amenities, exquisite dining, and stunning views to make your stay truly unforgettable.
+                Experience the perfect blend of luxury and comfort at our hotel.
+                Nestled in the heart of the city, our hotel offers world-class
+                amenities, exquisite dining, and stunning views to make your
+                stay truly unforgettable.
               </p>
               <ul className="text-sm md:text-base lg:text-xl space-y-4">
-                <li className="flex items-center"><FaBed className="mr-3 text-lg md:text-2xl" /> Variety of comfortable rooms</li>
-                <li className="flex items-center"><FaCoffee className="mr-3 text-lg md:text-2xl" /> Unlimited coffee</li>
-                <li className="flex items-center"><FaBath className="mr-3 text-lg md:text-2xl" /> Private bathrooms</li>
-                <li className="flex items-center"><FaUtensils className="mr-3 text-lg md:text-2xl" /> Fully equipped kitchens</li>
-                <li className="flex items-center"><FaConciergeBell className="mr-3 text-lg md:text-2xl" /> Delicious dining options</li>
+                <li className="flex items-center">
+                  <FaBed className="mr-3 text-lg md:text-2xl" /> Variety of
+                  comfortable rooms
+                </li>
+                <li className="flex items-center">
+                  <FaCoffee className="mr-3 text-lg md:text-2xl" /> Unlimited
+                  coffee
+                </li>
+                <li className="flex items-center">
+                  <FaBath className="mr-3 text-lg md:text-2xl" /> Private
+                  bathrooms
+                </li>
+                <li className="flex items-center">
+                  <FaUtensils className="mr-3 text-lg md:text-2xl" /> Fully
+                  equipped kitchens
+                </li>
+                <li className="flex items-center">
+                  <FaConciergeBell className="mr-3 text-lg md:text-2xl" />{" "}
+                  Delicious dining options
+                </li>
               </ul>
               <p className="text-sm md:text-base lg:text-xl text-justify">
-                Book your stay with us today and discover a world of elegance and sophistication.
+                Book your stay with us today and discover a world of elegance
+                and sophistication.
               </p>
             </div>
           </div>

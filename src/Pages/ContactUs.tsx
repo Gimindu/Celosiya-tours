@@ -195,4 +195,3 @@ export default function ContactUs() {
 
 
 
-// emailjs use karanna eka lesi habai email ekak nathiu ekai parashne ekai hadduwe naththe

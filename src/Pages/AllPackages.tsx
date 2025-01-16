@@ -95,7 +95,7 @@ export default function AllPackages() {
     },
     {
       title: 'Kalutara',
-      description: 'Kalutara features sacred sites, scenic falls, the Sinharaja Rainforest, and vibrant river safaris.',
+      description: 'Kalutara features sacred sites, scenic falls, the Sinharaja Rain forest, and vibrant river safaris.',
       //details: ['10 Days', '9 Nights', 'Gourmet Dining', 'VIP Transportation'],
       image: kaluthara,
     },
@@ -157,7 +157,7 @@ export default function AllPackages() {
                 onClick={() => {
                   const message = `Hi, I'm interested in the "${pkg.title}" package. Can you provide more details? Thanks!`;  
                   const encodedMessage = encodeURIComponent(message);
-                  const phoneNumber = "+94702992332";
+                  const phoneNumber = "+94742338208";
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`; // Replace '1234567890' with your WhatsApp number.
                   window.open(whatsappUrl, "_blank");
                 }}

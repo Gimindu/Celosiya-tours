@@ -90,7 +90,7 @@ export default function Packages() {
                 onClick={() => {
                   const message = `Hi, I'm interested in the "${pkg.title}" package. Can you provide more details? Thanks!`;  
                   const encodedMessage = encodeURIComponent(message);
-                  const phoneNumber = "+94702992332";
+                  const phoneNumber = "+94742338208"; 
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`; // Replace '1234567890' with your WhatsApp number.
                   window.open(whatsappUrl, "_blank");
                 }}
