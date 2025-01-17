@@ -71,8 +71,8 @@ export default function ContactUs() {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        "service_al17d27", // Replace with your EmailJS Service ID
-        "template_5lnjcxo", // Replace with your EmailJS Template ID
+        "service_ocvau55", // Replace with your EmailJS Service ID
+        "template_babmumg", // Replace with your EmailJS Template ID
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -80,7 +80,7 @@ export default function ContactUs() {
           phone: formData.phone,
           message: formData.message,
         },
-        "i8OoDK9PJt-1kLX52" // Replace with your EmailJS User/Public Key
+        "FHIfRDmHRgfFsnuJw" // Replace with your EmailJS User/Public Key
       );
   
       // Success
