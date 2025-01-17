@@ -69,7 +69,7 @@ function NavBar() {
                   <a href="#packages">Packages</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
+                  <a href="#room">Villa</a>
                 </li>
               </ul>
             )}
@@ -113,7 +113,7 @@ function NavBar() {
                   <a href="#packages">Packages</a>
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-500">
-                  <a href="#room">Room</a>
+                  <a href="#room">Villa</a>
                 </li>
               </ul>
             )}
