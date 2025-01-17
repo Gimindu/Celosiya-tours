@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white bg-opacity-10 backdrop-blur-md py-4 sm:mt-20 gap-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between text-center md:text-left gap">
-        <div>
+        <div className="ml-20">
           <img
             src={logo}
             alt="Travel Logo"
@@ -47,15 +47,8 @@ export default function Footer() {
             <p>Phone: <a href="tel:+94742338208" className="text-blue-950 hover:underline">+94742338208</a></p>
           </div>
         </div>
-        <div>
-          <h3 className="font-bold text-lg text-blue-950 mt-10">Company</h3>
-          <ul className="text-blue-950 text-sm">
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Upcoming Packages</li>
-          </ul>
-        </div>
-        <div>
+        
+        <div className='mr-20'>
           <h3 className="font-bold text-lg text-blue-950 mt-10">Recommend Destination</h3>
           <ul className="text-blue-950 text-sm">
             <li>Ella</li>
